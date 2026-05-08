@@ -6,6 +6,7 @@
 typedef struct { 
     char tab[10];
     int val;
+    int type;
 }carte;   // structure d'une carte
 
 typedef struct{
