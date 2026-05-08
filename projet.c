@@ -5,9 +5,7 @@
 
 typedef struct { 
     char tab[10];
-   unsigned int val;
-   unsigned int bnus;
-    
+    int val;
 }carte;   // structure d'une carte
 
 typedef struct{
@@ -39,11 +37,36 @@ joueur CreationJoueur(int x){ //creer le profil de chaque joueur de la partie
 retun a;
 } 
 
+void creation_pioche(carte*tab, int*n){
+ int index=0
 
+  for(int i=0; i <12 ;i++){
+    for (int K=0; K<i; k++){ 
+      strcy(tab[index].nom,"i");
+      tab[index].val=i;
+      index++;
+    }
+  }
+tab[0].val=1;
 
+strcpy(tab[index].nom, "+4");
+tab[index].val=4;
+index++;
+strcpy(tab[index].nom, "+6");
+tab[index].val=6;
+index++;
+strcpy(tab[index].nom, "+8");
+tab[index].val=8;
+index++;
+strcpy(tab[index].nom, "+10");
+tab[index].val=10;
+index++;
+strcpy(tab[index].nom, "x2");
+tab[index].val=-1;
 
-
-
+n=index;
+    
+}
 
 
 
@@ -56,9 +79,13 @@ void viderBuffer() { // supprime la saisie de l'utilisateur si celle-ci est mauv
     } while (c != '\n');
 }
 
+
+
 int main(){
 int nbj;
 int res;
+carte pioche[85];
+int taille_pioche;
 
 
 do{
