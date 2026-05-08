@@ -47,12 +47,6 @@ retun a;
 
 
 
-
-int main(){
-int nbj;
-int res;
-
-
 void viderBuffer() { // supprime la saisie de l'utilisateur si celle-ci est mauvaise
 
     char c;
@@ -61,6 +55,11 @@ void viderBuffer() { // supprime la saisie de l'utilisateur si celle-ci est mauv
         c = getchar();
     } while (c != '\n');
 }
+
+int main(){
+int nbj;
+int res;
+
 
 do{
 printf("Combien y a t'il de joueur ? \n"); // demande le nb de joueurs
