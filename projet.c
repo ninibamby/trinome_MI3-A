@@ -34,7 +34,7 @@ joueur CreationJoueur(int x){
   a.nb_carte=0;
   a.score=0;
   a.score_total=0;
-  a.actif=0;
+  a.actif=1;
 
 retun a;
 }// fonction de creation des joueurs 
