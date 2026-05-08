@@ -76,6 +76,16 @@ n=index;
 }
 
 
+void melange_pioche(carte* tab,int taille){
+  carte temp;
+  for (int i=0 ; i<taille ;i++){
+    int r=srand()%taille;
+    temp=tab[i];
+    tab[i]=tab[r];
+    tab[r]=temp;
+  }
+}
+
 
 void viderBuffer() { // supprime la saisie de l'utilisateur si celle-ci est mauvaise
 
