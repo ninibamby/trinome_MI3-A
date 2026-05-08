@@ -44,6 +44,7 @@ void creation_pioche(carte*tab, int*n){
     for (int K=0; K<i; k++){ 
       tab[index].nom[0]=('0'+i);
       tab[index].val=i;
+        tab[index].type=0;
       index++;
     }
   }
