@@ -63,14 +63,12 @@ int res;
 
 do{
 printf("Combien y a t'il de joueur ? \n"); // demande le nb de joueurs
-res = scanf (" %d ", &nbj);
+res = scanf ("%d", &nbj);
     if ( res != 1){ // si scanf n'arrive pas à lire un entier alors il ne renvoie pas 1
         viderBuffer();
         printf(" Il faut entrer un entier positif ! \n ");
         nbj = 0;
-    } 
-        
-    if (nbj<2){
+    } else if (nbj<2){
   printf("Pas assez de joueurs");   // message d'erreur si nb joueurs < 2
 }
 }while(nbj<2);//demande du nombre de joueur
