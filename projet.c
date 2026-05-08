@@ -42,7 +42,7 @@ void creation_pioche(carte*tab, int*n){
 
   for(int i=0; i <12 ;i++){
     for (int K=0; K<i; k++){ 
-      strcy(tab[index].nom,"i");
+      tab[index].nom[0]=('0'+i);
       tab[index].val=i;
       index++;
     }
