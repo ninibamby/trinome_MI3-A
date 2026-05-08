@@ -131,7 +131,7 @@ tab[i-1]=CreationJoueur(i);
         printf("%d : %s\n", tab[i].numj, tab[i].pseudo);
     }
 
-
+return 0;
 }
 
 
