@@ -6,8 +6,8 @@
 typedef struct { 
     char tab[10];
     int val;
-    int type; // 0 si carte = valeur, 1 si addition, 2 si multiplication
-}carte;   // structure d'une carte
+    int type;         //indicateur de type de carte : 0 si valeur, 1 si addition, 2 si multiplication
+}carte;               // structure d'une carte
 
 typedef struct{
    int numj;
@@ -45,7 +45,7 @@ void creation_pioche(carte*tab, int*n){
     for (int K=0; K<i; k++){ 
       tab[index].nom[0]=('0'+i);
       tab[index].val=i;
-      tab[index].type=0;
+      tab[index].type=0;             // 0 car carte "normale"
       index++;
     }
   }
@@ -53,7 +53,7 @@ tab[0].val=1;
 
 strcpy(tab[index].nom, "+4");
 tab[index].val=4;
-tab[index].type=1;
+tab[index].type=1;                         // 1 car addition
 index++;
 strcpy(tab[index].nom, "+6");
 tab[index].val=6;
@@ -69,7 +69,7 @@ tab[index].type=1;
 index++;
 strcpy(tab[index].nom, "x2");
 tab[index].val=-1;
-tab[index].type=2;
+tab[index].type=2;                     // 2 car multiplication
 
 n=index;
     
