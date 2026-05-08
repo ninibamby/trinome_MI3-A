@@ -45,7 +45,7 @@ void creation_pioche(carte*tab, int*n){
     for (int K=0; K<i; k++){ 
       tab[index].nom[0]=('0'+i);
       tab[index].val=i;
-        tab[index].type=0; // indicateur de type de  carte : 0 si carte "normale"
+      tab[index].type=0;
       index++;
     }
   }
@@ -53,18 +53,23 @@ tab[0].val=1;
 
 strcpy(tab[index].nom, "+4");
 tab[index].val=4;
+tab[index].type=1;
 index++;
 strcpy(tab[index].nom, "+6");
 tab[index].val=6;
+tab[index].type=1;
 index++;
 strcpy(tab[index].nom, "+8");
 tab[index].val=8;
+tab[index].type=1;
 index++;
 strcpy(tab[index].nom, "+10");
 tab[index].val=10;
+tab[index].type=1;
 index++;
 strcpy(tab[index].nom, "x2");
 tab[index].val=-1;
+tab[index].type=2;
 
 n=index;
     
