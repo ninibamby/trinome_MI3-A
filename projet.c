@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <sting.h>
-#include <stlib.h>
+#include <string.h>
+#include <stdlib.h>
 
 
 typedef struct {
@@ -19,13 +19,8 @@ typedef struct{
    int actif;
    }joueur //structure du joueur
 
-typedef stuct{
+
   
-
-
-
-}
-
 
 
 
@@ -39,7 +34,7 @@ joueur CreationJoueur(int x){
   a.nb_carte=0;
   a.score=0;
   a.score_total=0;
-  a.actif=0
+  a.actif=0;
 
 retun a;
 }// fonction de creation des joueurs 
