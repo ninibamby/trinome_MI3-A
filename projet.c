@@ -52,7 +52,7 @@ int main(){
 int nbj;
 
 //affichage 
-
+d
 
 do{
 printf("Combien y a t'il de joueur ? \n");
