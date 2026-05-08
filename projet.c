@@ -6,7 +6,7 @@
 typedef struct { 
     char tab[10];
     int val;
-    int type;
+    int type; // 0 si carte = valeur, 1 si addition, 2 si multiplication
 }carte;   // structure d'une carte
 
 typedef struct{
@@ -45,7 +45,7 @@ void creation_pioche(carte*tab, int*n){
     for (int K=0; K<i; k++){ 
       tab[index].nom[0]=('0'+i);
       tab[index].val=i;
-        tab[index].type=0;
+        tab[index].type=0; // indicateur de type de  carte : 0 si carte "normale"
       index++;
     }
   }
@@ -84,16 +84,17 @@ void viderBuffer() { // supprime la saisie de l'utilisateur si celle-ci est mauv
 
 
 int main(){
-int nbj;
-int res;
+srand(time(NULL));
+int nbj;                     // nb de joueurs ds la partie
+int verif;                      // verificateur de nbj
 carte pioche[85];
 int taille_pioche;
 
 
 do{
 printf("Combien y a t'il de joueur ? \n"); // demande le nb de joueurs
-res = scanf ("%d", &nbj);
-    if ( res != 1){ // si scanf n'arrive pas à lire un entier alors il ne renvoie pas 1
+verif = scanf ("%d", &nbj);
+    if ( verif != 1){ // si scanf n'arrive pas à lire un entier alors il ne renvoie pas 1
         viderBuffer();
         printf(" Il faut entrer un entier positif ! \n ");
         nbj = 0;
