@@ -56,7 +56,7 @@ int nbj;
 
 do{
 printf("Combien y a t'il de joueur ? \n");
-scanf (" %d ", nbj);
+scanf (" %d ", &nbj);
   printf("Pas assez de joueurs");  
 }while(nbj<2);//demande du nombre de joueur
 
@@ -64,10 +64,8 @@ joueur tab[nbj];
 
 
 
-for(int i=1,i<=nbj,i++){
+for(int i=1; i <=nbj ; i++){
 tab[i-1]=CreationJoueur(i);
-
-
 }
 
 
