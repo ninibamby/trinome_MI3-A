@@ -3,12 +3,12 @@
 #include <stdlib.h>
 
 
-typedef struct {
+typedef struct { 
     char tab[10];
    unsigned int val;
    unsigned int bnus;
     
-}carte;
+}carte;   // structure d'une carte
 
 typedef struct{
    int numj;
@@ -17,7 +17,7 @@ typedef struct{
    int score;
    int score_total;
    int actif;
-   }joueur //structure du joueur
+   }joueur; //structure du joueur
 
 
   
