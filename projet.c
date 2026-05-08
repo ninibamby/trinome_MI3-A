@@ -3,7 +3,12 @@
 #include <stlib.h>
 
 
-
+typedef struct {
+    char tab[10];
+   unsigned int val;
+   unsigned int bnus;
+    
+}carte;
 
 typedef struct{
    int numj;
