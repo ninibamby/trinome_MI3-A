@@ -7,7 +7,7 @@ typedef struct {
     char tab[10];
     int val;
     int type;         //indicateur de type de carte : 0 si valeur, 1 si addition, 2 si multiplication
-}carte;               // structure d'une carte
+}carte;               //structure d'une carte
 
 typedef struct{
    int numj;
@@ -136,7 +136,24 @@ triTabCarte( tab, taille);
 } return 0;
  }
 
+int calcul_score(carte* tab, int taille){
+int score0 = 0;
+int socre1 = 0;
+int score2 = 0;
+int score_final;
 
+    for( int i = 0; i < taille; i++){
+        if( tab[i].type ==  0){
+            score0 +=  tab[i].val;
+    } else if ( tab[i].type == 1){
+            score1 += tab[i].val;
+    } else {
+score2 = 2*score0;
+  }
+}
+score_final = score2 + score1;
+return score_final;
+}
 
 
 
