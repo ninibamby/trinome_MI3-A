@@ -148,9 +148,9 @@ int score_final;
     } else if ( tab[i].type == 1){
             score1 += tab[i].val;
     } else {
-score2 = 2*score0;
+score2 ++;
   }
-}
+} score2 *= 2*score0;
 score_final = score2 + score1;
 return score_final;
 }
