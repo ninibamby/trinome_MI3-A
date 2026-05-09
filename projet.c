@@ -47,7 +47,7 @@ void creation_pioche(carte*tab, int*n){
       tab[index].val=i;
       tab[index].type=0;             // 0 car carte "normale"
       index++;
-    }
+    } //pb pour 10 11 12
   }
 tab[0].val=1;
 
@@ -71,7 +71,7 @@ strcpy(tab[index].nom, "x2");
 tab[index].val=-1;
 tab[index].type=2;                     // 2 car multiplication
 
-n=index;
+*n=index;
     
 }
 
