@@ -92,7 +92,7 @@ strcpy(tab[index].nom, "x2");
 tab[index].val=-1;
 tab[index].type=2;
 
-n=index;
+*n=index+1;
     
 }
 
