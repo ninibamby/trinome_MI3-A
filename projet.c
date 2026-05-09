@@ -43,17 +43,37 @@ void creation_pioche(carte*tab, int*n){
 
   for(int i=0; i <12 ;i++){
     for (int K=0; K<i; k++){ 
+      if (i<10){
       tab[index].nom[0]=('0'+i);
       tab[index].val=i;
-      tab[index].type=0;             // 0 car carte "normale"
+      tab[index].type=0;
+      }
+      else if (i=10){
+      tab[index].nom[0]='1';
+      tab[index].nom[1]='0';
+      tab[index].val=i;
+      tab[index].type=0;
+      }
+      else if (i=11){
+      tab[index].nom[0]='1';
+      tab[index].nom[1]='1';
+      tab[index].val=i;
+      tab[index].type=0;
+      }
+      else if (i=12){
+      tab[index].nom[0]='1';
+      tab[index].nom[1]='2';
+      tab[index].val=i;
+      tab[index].type=0;
+      }
       index++;
-    } //pb pour 10 11 12
+    }
   }
 tab[0].val=1;
 
 strcpy(tab[index].nom, "+4");
 tab[index].val=4;
-tab[index].type=1;                         // 1 car addition
+tab[index].type=1;
 index++;
 strcpy(tab[index].nom, "+6");
 tab[index].val=6;
@@ -69,9 +89,9 @@ tab[index].type=1;
 index++;
 strcpy(tab[index].nom, "x2");
 tab[index].val=-1;
-tab[index].type=2;                     // 2 car multiplication
+tab[index].type=2;
 
-*n=index;
+n=index;
     
 }
 
