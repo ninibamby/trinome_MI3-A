@@ -111,22 +111,59 @@ void melange_pioche(carte* tab,int taille){
 
 
 
-void manche(joueur* tab_j, int nbj, carte* tab_p, int nbc){
+int  manche(joueur* tab_j, int nbj, carte* tab_p, int nbc){     //return 0 = pas fini 1=plus de carte 2= flip 7
+
   int manche_fini=0;
+  int res;
+  int rep;
+
   for (int i=0; i<nbj; i++){
     tab_j[i].actif=1;
     tab_j[i].score=0;
     tab_j[i].nb_carte=0;
   }
+
 do{
-for (int i=0; i<nbj ;i++){
 
+ for (int i=0; i<nbj ;i++){
+  if 
+if(tab_j[i].actif==1){
+printf ("-------tour du joueur %d-------\n",tab[i].numj);
+printf ("voulez vous piocher une carte ? \n");
+do{
+res=scanf(" %d",&rep);
+if (res !=1){
+  viderbuffer();
+  printf("il faut entrer 1 ou 2 \n");
+  rep=0;
+}
+else if(rep != 1 && rep != 2){
+  printf("il faut entrer 1 ou 2 \n");
+}
+}while(rep!=1 && rep!=2);
 
-  
+if(rep==0){
+  tab_j[i].actif=0;
+}
+
+else if(rep==0){
+int nb_carte=tab_j[i].nb_carte
+tab_j[i].nb_carte++;
+tab_j[i].main[nb_carte]=tab_j[nbc].
+nbc--;
+
+printf("vous avez piocher un %s",tab[i].main[nb_carte].nom);
 
 
 
 }
+  
+
+
+}
+
+}
+
 
 
 int joueurs_actifs = 0;
