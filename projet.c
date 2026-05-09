@@ -155,9 +155,12 @@ int  manche(joueur* tab_j, int nbj, carte* tab_p, int nbc){     //return 0 = pas
 do{
 
  for (int i=0; i<nbj ;i++){
-  if 
+  if (nbc==0){
+    return 1;
+  }
+
 if(tab_j[i].actif==1){
-printf ("-------tour du joueur %d-------\n",tab[i].numj);
+printf ("-------tour du joueur : %d-------\n",tab[i].numj);
 printf ("voulez vous piocher une carte ? \n");
 do{
 res=scanf(" %d",&rep);
@@ -178,21 +181,21 @@ if(rep==2){
 else if(rep==1){
 int nb_carte=tab_j[i].nb_carte
 tab_j[i].nb_carte++;
-tab_j[i].main[nb_carte]=tab_j[nbc].
+tab_j[i].main[nb_carte]=tab_j[nbc-1].
 nbc--;
 
-printf("vous avez piocher un %s",tab[i].main[nb_carte].nom);
+printf("vous avez piocher un %s \n",tab[i].main[nb_carte].nom);
 
-
-
+int doublon=0;
+doublon=doublon(tab[i].main,nb_carte+1);
+if(doublon==1){
+  tab_j[i].actif=0;
+  printf(" Vous avez piocher un double, vous etes mauvais \n");
+  tab[i].nb_carte=0;
 }
-  
-
-
 }
-
 }
-
+}
 
 
 int joueurs_actifs = 0;
@@ -209,6 +212,16 @@ if(joueurs_actifs == 0){
 }
 }while(manche_fini==0)
 
+// compte point 
+
+for (int i=0 ; i<nbj ;i++){
+  int nb_cartem=tab_j[i].nb_carte;
+  tab_j[i].score=calcul_score(tab_j[i].main,nb_cartem)
+  tab_j[i].score_total+=tab_[j].score;
+  printf (" le score de %s est de %d sur cette manche \n score total de %s : %d\n",tab_j[i].pseudo,tab_j[i].score,tab_j[i].pseudo,tab_j[i].score_total);
+
+}
+return 0;
 }
 
 
