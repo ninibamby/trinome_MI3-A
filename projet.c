@@ -107,6 +107,45 @@ void melange_pioche(carte* tab,int taille){
 }
 
 
+
+
+
+void manche(joueur* tab_j, int nbj, carte* tab_p, int nbc){
+  int manche_fini=0;
+  for (int i=0; i<nbj; i++){
+    tab_j[i].actif=1;
+    tab_j[i].score=0;
+    tab_j[i].nb_carte=0;
+  }
+do{
+for (int i=0; i<nbj ;i++){
+
+
+  
+
+
+
+}
+
+
+int joueurs_actifs = 0;
+
+for(int i=0; i<nbj; i++){
+
+    if(joueurs[i].actif == 1){
+        joueurs_actifs++;
+    }
+}
+
+if(joueurs_actifs == 0){
+    manche_finie = 1;
+}
+}while(manche_fini==0)
+
+}
+
+
+
 void viderBuffer() { // supprime la saisie de l'utilisateur si celle-ci est mauvaise
 
     char c;
@@ -122,8 +161,10 @@ int main(){
 srand(time(NULL));
 int nbj;                     // nb de joueurs ds la partie
 int verif;                      // verificateur de nbj
+int res;
 carte pioche[85];
-int taille_pioche;
+int taille_pioche=85;
+
 
 
 do{
@@ -138,17 +179,17 @@ verif = scanf ("%d", &nbj);
 }
 }while(nbj<2);//demande du nombre de joueur
 
-joueur tab[nbj];
+joueur tab_joueur[nbj];
 
 
 
 for(int i=1; i <=nbj ; i++){
-tab[i-1]=CreationJoueur(i);
+tab_joueur[i-1]=CreationJoueur(i);
 }
  printf("\n--- JOUEURS ---\n");
 
     for(int i = 0; i < nbj; i++){
-        printf("%d : %s\n", tab[i].numj, tab[i].pseudo);
+        printf("%d : %s\n", tab_joueur[i].numj, tab_joueur[i].pseudo);
     }
 
 return 0;
