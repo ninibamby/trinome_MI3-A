@@ -142,11 +142,11 @@ else if(rep != 1 && rep != 2){
 }
 }while(rep!=1 && rep!=2);
 
-if(rep==0){
+if(rep==2){
   tab_j[i].actif=0;
 }
 
-else if(rep==0){
+else if(rep==1){
 int nb_carte=tab_j[i].nb_carte
 tab_j[i].nb_carte++;
 tab_j[i].main[nb_carte]=tab_j[nbc].
