@@ -151,7 +151,11 @@ int score_final;
 score2 ++;
   }
 } score2 *= 2*score0;
-score_final = score2 + score1;
+    if ( score2 == 0 ){
+score_final = score0 + score1;
+    } else {
+        score_final = score2 + score1;
+    }
 return score_final;
 }
 
