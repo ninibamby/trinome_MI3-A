@@ -108,6 +108,35 @@ void melange_pioche(carte* tab,int taille){
 }
 
 
+void triTabCarte( carte* tab, int taille ){
+int desordre;
+int etape = taille-1;
+int temp;
+do{
+
+    desordre = 0;
+    for( int i = 0; i < etape; i++){
+        if ( tab[i] > tab[i+1] ){
+            desordre = 1;
+            temp = tab[i];
+            tab[i] = tab[i+1];
+            tab[i+1] = temp;
+}
+} etape--;
+}while( etape > 0 && desordre != 0);
+}
+
+int doublon(carte* tab, int taille){
+triTabCarte( tab, taille);
+ for(int i = 0; i < taille-1; i++ ){
+    if( tab[i].type == 0 ){
+         if( tab[i] == tab[i+1] ){
+            return 1;
+}
+} return 0;
+ }
+
+
 
 
 
