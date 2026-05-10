@@ -298,8 +298,8 @@ printf (" %s a sept carte la manche est terminée \n",tab[i].pseudo);
 break
 }   // fin recherche_flip7
 if (nbc==0){
-  printf ("la pioche est vide la manche est terminée \n")
-  break
+  printf ("la pioche est vide la manche est terminée \n");
+  return 2;
 }
 
 
@@ -339,11 +339,11 @@ return 1;
 }
 return 0;
 
-} 
+}             //return 0  tout les joueurs arrete et return 1 si un joueur depasse 200 et return 2 si plus de carte 
 
 
 
-void viderBuffer() { // supprime la saisie de l'utilisateur si celle-ci est mauvaise
+void viderBuffer() {         // supprime la saisie de l'utilisateur si celle-ci est mauvaise
 
     char c;
 
