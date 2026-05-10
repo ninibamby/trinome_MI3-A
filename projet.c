@@ -245,12 +245,10 @@ int  manche(joueur* tab_j, int nbj, carte* tab_p, int nbc){     //return 0 = pas
     tab_j[i].nb_carte=0;
   }
 
-do{
+do{.        //debut de la boucle de la manche 
 
- for (int i=0; i<nbj ;i++){
-  if (nbc==0){
-    return 1;
-  }
+ for (int i=0; i<nbj ;i++){           //passe de joueur a joueur 
+
 
 if(tab_j[i].actif==1){
 printf ("-------tour du joueur : %d-------\n",tab_j[i].numj);
@@ -301,6 +299,7 @@ break
 }   // fin recherche_flip7
 if (nbc==0){
   printf ("la pioche est vide la manche est terminée \n")
+  break
 }
 
 
@@ -333,8 +332,14 @@ for (int i=0 ; i<nbj ;i++){
   printf (" le score de %s est de %d sur cette manche \n score total de %s : %d\n",tab_j[i].pseudo,tab_j[i].score,tab_j[i].pseudo,tab_j[i].score_total);
 
 }
-return 0;
+for (int i=0 ; i<nbj ;i++){
+  if (tab_j[i].score_total>=200){
+return 1;
+  }
 }
+return 0;
+
+} 
 
 
 
