@@ -332,6 +332,18 @@ tab_joueur[i-1]=CreationJoueur(i);
         printf("%d : %s\n", tab_joueur[i].numj, tab_joueur[i].pseudo);
     }
 
+
+creation_pioche(pioche,taille_pioche);
+
+
+
+
+
+
+
+
+
+    
 return 0;
 }
 
