@@ -269,7 +269,22 @@ for (int i=0 ; i<nbj ;i++){
 return 0;
 }
 
+void compte_carte(carte* tab, int n){
 
+for (int i=0 ; i<n ;i++){
+  for (int k=2 ; k<=12 ; k++){
+      int count=0;
+      char nom_c[3];
+      if (tab[i].type==0 && tab[i].val==k){
+        count++;
+       strcpy(nom_c,tab[i].nom);
+        
+      }
+printf (" reste %d %s",count,nom_c)
+  }
+} 
+
+}
 
 void viderBuffer() { // supprime la saisie de l'utilisateur si celle-ci est mauvaise
 
