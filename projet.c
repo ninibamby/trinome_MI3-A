@@ -222,16 +222,19 @@ int est_doublon=0;
 est_doublon=doublon(tab[i].main,nb_carte+1);
 if(est_doublon==1){
   tab_j[i].actif=0;
-  printf(" Vous avez piocher un double, vous etes mauvais \n");
+  printf(" Vous avez piocher un double, c'est perdu \n");
   tab_j[i].nb_carte=0;
 }
 int recherche_flip7=0;
 recherche_flip7=flip_7(tab_j[i].main,nb_carte+1);
 if (recherche_flp7==1){
   tab_j[i].score=15;
-printf (" %s a sept carte la manche est terminée",tab[i].pseudo);
-return 2;
+printf (" %s a sept carte la manche est terminée \n",tab[i].pseudo);
+break
 }   // fin recherche_flip7
+if (nbc==0){
+  printf ("la pioche est vide la manche est terminée \n")
+}
 
 
 
@@ -249,7 +252,7 @@ for(int i=0; i<nbj; i++){
     }
 }
 
-if(joueurs_actifs == 0){
+if(joueurs_actifs == 0 && nbc==0 && recherche_flip7==1){
     manche_finie = 1;
 }
 }while(manche_fini==0);
