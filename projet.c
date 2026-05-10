@@ -148,17 +148,29 @@ int score_final;
     } else if ( tab[i].type == 1){
             score1 += tab[i].val;
     } else {
-score2 ++;
+score2 = 1;
   }
-} score2 *= 2*score0;
+} 
+    score2 *= 2*score0;
     if ( score2 == 0 ){
 score_final = score0 + score1;
-    } else {
+        
+    }else {
         score_final = score2 + score1;
     }
 return score_final;
 }
 
+int flip_7( int *tab, int taille){
+int count_seven = 0;
+    for ( int i = 0; i < taille; i++ ){
+    if ( tab[i].type == 0 ){
+        count_seven ++;
+} if ( count_seven == 7 ){
+        return 1;
+}
+} return 0;
+}
 
 
 int  manche(joueur* tab_j, int nbj, carte* tab_p, int nbc){     //return 0 = pas fini 1=plus de carte 2= flip 7
