@@ -252,7 +252,7 @@ for(int i=0; i<nbj; i++){
     }
 }
 
-if(joueurs_actifs == 0 && nbc==0 && recherche_flip7==1){
+if(joueurs_actifs == 0 || nbc==0 || recherche_flip7==1){
     manche_finie = 1;
 }
 }while(manche_fini==0);
