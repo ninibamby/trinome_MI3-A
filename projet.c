@@ -42,7 +42,7 @@ retun a;
 void creation_pioche(carte*tab, int*n){
  int index=0
 
-  for(int i=0; i <12 ;i++){
+  for(int i=0; i <12 ;i++){        //cree toute les carte numero (type 0)
     for (int K=0; K<i; k++){ 
       if (i<10){
       tab[index].nom[0]=('0'+i);
@@ -72,7 +72,7 @@ void creation_pioche(carte*tab, int*n){
   }
 tab[0].val=1;
 
-strcpy(tab[index].nom, "+4");
+strcpy(tab[index].nom, "+4");        //cree tout les bonus (type 1)
 tab[index].val=4;
 tab[index].type=1;
 index++;
@@ -88,7 +88,7 @@ strcpy(tab[index].nom, "+10");
 tab[index].val=10;
 tab[index].type=1;
 index++;
-strcpy(tab[index].nom, "x2");
+strcpy(tab[index].nom, "x2");        //cree le X2 (type 2)
 tab[index].val=-1;
 tab[index].type=2;
 
@@ -99,7 +99,7 @@ tab[index].type=2;
 
 void melange_pioche(carte* tab,int taille){
   carte temp;
-  for (int i=0 ; i<taille ;i++){
+  for (int i=0 ; i<taille ;i++){        //echange aleatoirement 2 element du tableau
     int r=srand()%taille;
     temp=tab[i];
     tab[i]=tab[r];
@@ -108,7 +108,7 @@ void melange_pioche(carte* tab,int taille){
 }
 
 
-void triTabCarte( carte* tab, int taille ){
+void triTabCarte( carte* tab, int taille ){        //un tri a bulle de la main du joueur 
 int desordre;
 int etape = taille-1;
 int temp;
@@ -126,7 +126,7 @@ do{
 }while( etape > 0 && desordre != 0);
 }
 
-int doublon(carte* tab, int taille){
+int doublon(carte* tab, int taille){        //on verifie si 2 carte de type 0 se suivent ont la meme valeur 
 triTabCarte( tab, taille);
  for(int i = 0; i < taille-1; i++ ){
     if( tab[i].type == 0 ){
@@ -142,12 +142,12 @@ int socre1 = 0;
 int score2 = 0;
 int score_final;
 
-    for( int i = 0; i < taille; i++){
+    for( int i = 0; i < taille; i++){        //calcul les carte valeur
         if( tab[i].type ==  0){
             score0 +=  tab[i].val;
-    } else if ( tab[i].type == 1){
+    } else if ( tab[i].type == 1){        //calcul les bonus +
             score1 += tab[i].val;
-    } else {
+    } else {                                //verifie si il y a un X2
 score2 = 1;
   }
 } 
@@ -163,7 +163,7 @@ return score_final;
 
 int flip_7( int *tab, int taille){
 int count_seven = 0;
-    for ( int i = 0; i < taille; i++ ){
+    for ( int i = 0; i < taille; i++ ){        //compte le nb de crate de type 0
     if ( tab[i].type == 0 ){
         count_seven ++;
 } if ( count_seven == 7 ){
@@ -272,9 +272,9 @@ else if(rep != 1 && rep != 2){
 
 if(rep==2){
   tab_j[i].actif=0;
-}        //rend le joueur inactif car il arrete 
+}                        //rend le joueur inactif car il arrete 
 
-else if(rep==1){        //debut si le joueur continue
+else if(rep==1){            //debut si le joueur continue
 int nb_carte=tab_j[i].nb_carte;
 tab_j[i].nb_carte++;
 tab_j[i].main[nb_carte]=tab_p[nbc-1];
@@ -314,12 +314,12 @@ int joueurs_actifs = 0;
 
 for(int i=0; i<nbj; i++){
 
-    if(tab_j[i].actif == 1){
+    if(tab_j[i].actif == 1){        //cherche si tout les joueur on arreter 
         joueurs_actifs++;
     }
 }
 
-if(joueurs_actifs == 0 || nbc==0 || recherche_flip7==1){
+if(joueurs_actifs == 0 || nbc==0 || recherche_flip7==1){      //cherche si il y a une des condition pour finir la partie          
     manche_finie = 1;
 }
 }while(manche_fini==0);
@@ -351,9 +351,9 @@ void viderBuffer() { // supprime la saisie de l'utilisateur si celle-ci est mauv
 
 int main(){
 srand(time(NULL));
-int nbj;                     // nb de joueurs ds la partie
+int nbj;                        // nb de joueurs ds la partie
 int verif;                      // verificateur de nbj
-int res;
+int nbj;                        // nb de joueur
 carte pioche[85];
 int taille_pioche=85;
 
