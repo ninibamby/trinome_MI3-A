@@ -255,7 +255,10 @@ do{
 if(tab_j[i].actif==1){
 printf ("-------tour du joueur : %d-------\n",tab_j[i].numj);
 printf ("voulez vous piocher une carte ? \n");
-do{
+printf("\n");
+    compte_carte(tab_p,nbc);
+    
+do{                            //verifie la reponse 
 res=scanf(" %d",&rep);
 if (res !=1){
   viderbuffer();
@@ -269,9 +272,9 @@ else if(rep != 1 && rep != 2){
 
 if(rep==2){
   tab_j[i].actif=0;
-}
+}        //rend le joueur inactif car il arrete 
 
-else if(rep==1){
+else if(rep==1){        //debut si le joueur continue
 int nb_carte=tab_j[i].nb_carte;
 tab_j[i].nb_carte++;
 tab_j[i].main[nb_carte]=tab_p[nbc-1];
@@ -281,14 +284,17 @@ printf("vous avez piocher un %s \n",tab[i].main[nb_carte].nom);
 
 int est_doublon=0;
 est_doublon=doublon(tab[i].main,nb_carte+1);
-if(est_doublon==1){
+    
+if(est_doublon==1){        //verif si il pioche un double
   tab_j[i].actif=0;
   printf(" Vous avez piocher un double, c'est perdu \n");
   tab_j[i].nb_carte=0;
 }
+    
 int recherche_flip7=0;
 recherche_flip7=flip_7(tab_j[i].main,nb_carte+1);
-if (recherche_flp7==1){
+    
+if (recherche_flp7==1){        //recherche si il y a un flip7
   tab_j[i].score=15;
 printf (" %s a sept carte la manche est terminée \n",tab[i].pseudo);
 break
