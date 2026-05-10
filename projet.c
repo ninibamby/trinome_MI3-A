@@ -4,7 +4,7 @@
 #include <time.h>
 
 typedef struct { 
-    char tab[10];
+    char nom[10];
     int val;
     int type;         //indicateur de type de carte : 0 si valeur, 1 si addition, 2 si multiplication
 }carte;               //structure d'une carte
