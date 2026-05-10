@@ -172,7 +172,6 @@ int count_seven = 0;
 } return 0;
 }
 
-
 int  manche(joueur* tab_j, int nbj, carte* tab_p, int nbc){     //return 0 = pas fini 1=plus de carte 2= flip 7
 
   int manche_fini=0;
@@ -193,7 +192,7 @@ do{
   }
 
 if(tab_j[i].actif==1){
-printf ("-------tour du joueur : %d-------\n",tab[i].numj);
+printf ("-------tour du joueur : %d-------\n",tab_j[i].numj);
 printf ("voulez vous piocher une carte ? \n");
 do{
 res=scanf(" %d",&rep);
@@ -212,30 +211,40 @@ if(rep==2){
 }
 
 else if(rep==1){
-int nb_carte=tab_j[i].nb_carte
+int nb_carte=tab_j[i].nb_carte;
 tab_j[i].nb_carte++;
-tab_j[i].main[nb_carte]=tab_j[nbc-1].
+tab_j[i].main[nb_carte]=tab_p[nbc-1];
 nbc--;
 
 printf("vous avez piocher un %s \n",tab[i].main[nb_carte].nom);
 
-int doublon=0;
-doublon=doublon(tab[i].main,nb_carte+1);
-if(doublon==1){
+int est_doublon=0;
+est_doublon=doublon(tab[i].main,nb_carte+1);
+if(est_doublon==1){
   tab_j[i].actif=0;
   printf(" Vous avez piocher un double, vous etes mauvais \n");
-  tab[i].nb_carte=0;
+  tab_j[i].nb_carte=0;
 }
-}
-}
-}
+int recherche_flip7=0;
+recherche_flip7=flip_7(tab_j[i].main,nb_carte+1);
+if (recherche_flp7==1){
+  tab_j[i].score=15;
+printf (" %s a sept carte la manche est terminée",tab[i].pseudo);
+return 2;
+}   // fin recherche_flip7
+
+
+
+}   //fin du si le joueur continue
+}   //fin de si le joueur est actif
+}   //fin de la boucle des joueur 
 
 
 int joueurs_actifs = 0;
 
 for(int i=0; i<nbj; i++){
 
-    if(joueurs[i].actif == 1){
+    if(tab_j[i].actif == 1){
         joueurs_actifs++;
     }
 }
@@ -243,7 +252,7 @@ for(int i=0; i<nbj; i++){
 if(joueurs_actifs == 0){
     manche_finie = 1;
 }
-}while(manche_fini==0)
+}while(manche_fini==0);
 
 // compte point 
 
