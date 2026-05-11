@@ -383,6 +383,8 @@ void affiche_resulats( joueur* tab, int taille, int n){
 
 
 
+
+
 int main(){
 srand(time(NULL));
 int nbj;                        // nb de joueurs ds la partie
