@@ -173,7 +173,7 @@ int count_seven = 0;
 }
 
 void affiche_main( joueur j){
-printf(" la main de %s est : \n "", j.pseudo );
+printf(" votre main, %s est : \n "", j.pseudo );
 for ( int i = 0; i < j.nb_carte; i++ ){
     printf(" [%s], ", j.main[i].nom )
 }
