@@ -111,12 +111,12 @@ void melange_pioche(carte* tab,int taille){
 void triTabCarte( carte* tab, int taille ){        //un tri a bulle de la main du joueur 
 int desordre;
 int etape = taille-1;
-int temp;
+carte temp;
 do{
 
     desordre = 0;
     for( int i = 0; i < etape; i++){
-        if ( tab[i] > tab[i+1] ){
+        if ( tab[i].val > tab[i+1].val ){
             desordre = 1;
             temp = tab[i];
             tab[i] = tab[i+1];
@@ -124,7 +124,9 @@ do{
 }
 } etape--;
 }while( etape > 0 && desordre != 0);
-}
+}            //fin tab carte
+
+
 
 int doublon(carte* tab, int taille){        //on verifie si 2 carte de type 0 se suivent ont la meme valeur 
 triTabCarte( tab, taille);
@@ -133,8 +135,12 @@ triTabCarte( tab, taille);
          if( tab[i] == tab[i+1] ){
             return 1;
 }
-} return 0;
- }
+} 
+}
+return 0;
+}     //fin doublon 
+
+
 
 int calcul_score(carte* tab, int taille){
 int score0 = 0;
@@ -160,6 +166,7 @@ score_final = score0 + score1;
     }
 return score_final;
 }
+
 
 int flip_7( int *tab, int taille){
 int count_seven = 0;
@@ -353,6 +360,25 @@ return 0;
 }             //return 0  tout les joueurs arrete et return 1 si un joueur depasse 200 et return 2 si plus de carte 
 
 
+partie (joueur* tab_j,int nbj, carte* tab_p , int nbc){   //debut fct partie
+int nb_tour;
+
+melange_pioche(tab_p,nbc);
+
+do{
+int res_manche=0;
+res_manche=manche(tab_j,nbj,tab_p,nbc);
+
+affiche_resultat(tab_j,nbj,res_manche);
+
+
+
+}while(res_manche!=1 || res_manche!=2);
+
+}   //fin fct partie
+
+
+
 
 void viderBuffer() {         // supprime la saisie de l'utilisateur si celle-ci est mauvaise
 
@@ -421,7 +447,9 @@ tab_joueur[i-1]=CreationJoueur(i);
     }
 
 
-creation_pioche(pioche,taille_pioche);
+creation_pioche(pioche,&taille_pioche);
+
+partie(tab_joueur,nbj,pioche,taille_pioche);
 
 
 
