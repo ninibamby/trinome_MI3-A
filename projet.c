@@ -175,7 +175,7 @@ int count_seven = 0;
 void affiche_main( joueur j){
 printf(" la main de %s est : \n "", j.pseudo );
 for ( int i = 0; i < j.nb_carte; i++ ){
-    printf(" %d, ", j.main[i] )
+    printf(" [%s], ", j.main[i].nom )
 }
 printf(" \n ");
 }
@@ -265,6 +265,7 @@ printf ("-------tour du joueur : %d-------\n",tab_j[i].numj);
 printf ("voulez vous piocher une carte ? \n");
 printf("\n");
     compte_carte(tab_p,nbc);
+    affiche_main( tab_j[i] );
     
 do{                            //verifie la reponse 
 res=scanf(" %d",&rep);
