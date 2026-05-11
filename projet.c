@@ -172,6 +172,16 @@ int count_seven = 0;
 } return 0;
 }
 
+void affiche_main( joueur j){
+printf(" la main de %s est : \n "", j.pseudo );
+for ( int i = 0; i < j.nb_carte; i++ ){
+    printf(" %d, ", j.main[i] )
+}
+printf(" \n ");
+}
+
+    
+
 
 void compte_carte(carte* tab, int n){
 int count0=0;
