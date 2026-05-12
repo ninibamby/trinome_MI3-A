@@ -122,3 +122,15 @@ for (int i=0 ; i<n ;i++){        //compte les X2
 }
 printf (" il reste %d %c \n",countX2,"X2");
 }
+
+
+
+void melange_pioche(carte* tab,int taille){
+  carte temp;
+  for (int i=0 ; i<taille ;i++){        //echange aleatoirement 2 element du tableau
+    int r=srand()%taille;
+    temp=tab[i];
+    tab[i]=tab[r];
+    tab[r]=temp;
+  }
+}
