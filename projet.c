@@ -36,14 +36,14 @@ joueur CreationJoueur(int x){ //creer le profil de chaque joueur de la partie
   a.score_total=0;                // initialise les données du joueur 
   a.actif=1;
 
-retun a;
+return a;
 } 
 
 void creation_pioche(carte*tab, int*n){
  int index=0
 
   for(int i=0; i <12 ;i++){        //cree toute les carte numero (type 0)
-    for (int K=0; K<i; k++){ 
+    for (int K=0; K<i; K++){ 
       if (i<10){
       tab[index].nom[0]=('0'+i);
       tab[index].val=i;
@@ -132,7 +132,7 @@ int doublon(carte* tab, int taille){        //on verifie si 2 carte de type 0 se
 triTabCarte( tab, taille);
  for(int i = 0; i < taille-1; i++ ){
     if( tab[i].type == 0 ){
-         if( tab[i] == tab[i+1] ){
+         if( tab[i].val == tab[i+1].val ){
             return 1;
 }
 } 
@@ -144,7 +144,7 @@ return 0;
 
 int calcul_score(carte* tab, int taille){
 int score0 = 0;
-int socre1 = 0;
+int score1 = 0;
 int score2 = 0;
 int score_final;
 
@@ -180,7 +180,7 @@ int count_seven = 0;
 }
 
 void affiche_main( joueur j){
-printf(" votre main, %s est : \n "", j.pseudo );
+printf(" votre main, %s est : \n ", j.pseudo );
 for ( int i = 0; i < j.nb_carte; i++ ){
     printf(" [%s], ", j.main[i].nom )
 }
@@ -199,10 +199,10 @@ int comp1;
 for (int i=0 ; i<n ;i++){        //compte les 0 et 1
 comp0=strcmp("0",tab[i].nom);
 comp1=strcmp("1",tab[i].nom);
-  if (tab[i].type==0 && comp0=0){
+  if (tab[i].type==0 && comp0==0){
   count0++;
   }
-  if (tab[i].type==0 && comp1=0){
+  if (tab[i].type==0 && comp1==0){
   count1++;
   }
 }
@@ -230,7 +230,7 @@ for (int i=0 ; i<n ;i++){        //compte les bonus de type +
       int count2=0;
       char nom_c[3];
       if (tab[i].type==1 && tab[i].val==k){
-        count++;
+        count2++;
        strcpy(nom_c,tab[i].nom);
         
       }
@@ -262,7 +262,7 @@ int  manche(joueur* tab_j, int nbj, carte* tab_p, int nbc){     //return 0 = pas
     tab_j[i].nb_carte=0;
   }
 
-do{.        //debut de la boucle de la manche 
+do{        //debut de la boucle de la manche 
 
  for (int i=0; i<nbj ;i++){           //passe de joueur a joueur 
 
@@ -337,7 +337,7 @@ for(int i=0; i<nbj; i++){
 }
 
 if(joueurs_actifs == 0 || nbc==0 || recherche_flip7==1){      //cherche si il y a une des condition pour finir la partie          
-    manche_finie = 1;
+    manche_fini = 1;
 }
 }while(manche_fini==0);
 
@@ -345,7 +345,7 @@ if(joueurs_actifs == 0 || nbc==0 || recherche_flip7==1){      //cherche si il y 
 
 for (int i=0 ; i<nbj ;i++){
   int nb_cartem=tab_j[i].nb_carte;
-  tab_j[i].score=calcul_score(tab_j[i].main,nb_cartem)
+  tab_j[i].score=calcul_score(tab_j[i].main,nb_cartem);
   tab_j[i].score_total+=tab_[j].score;
   printf (" le score de %s est de %d sur cette manche \n score total de ce joueur : %d\n",tab_j[i].pseudo,tab_j[i].score,tab_j[i].score_total);
 
