@@ -17,7 +17,7 @@ typedef struct{
    int score;
    int score_total;
    int actif;
-   }joueur; //structure du joueur
+   }joueur; //structure du joueur 
 
 
   
