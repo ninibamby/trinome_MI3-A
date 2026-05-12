@@ -3,6 +3,74 @@
 #include <stdlib.h>
 #include <time.h>
 
+void triTabCarte( carte* tab, int taille ){        //un tri a bulle de la main du joueur 
+int desordre;
+int etape = taille-1;
+carte temp;
+do{
+
+    desordre = 0;
+    for( int i = 0; i < etape; i++){
+        if ( tab[i].val > tab[i+1].val ){
+            desordre = 1;
+            temp = tab[i];
+            tab[i] = tab[i+1];
+            tab[i+1] = temp;
+}
+} etape--;
+}while( etape > 0 && desordre != 0);
+}
+
+int doublon(carte* tab, int taille){        //on verifie si 2 carte de type 0 se suivent ont la meme valeur 
+triTabCarte( tab, taille);
+ for(int i = 0; i < taille-1; i++ ){
+    if( tab[i].type == 0 ){
+         if( tab[i] == tab[i+1] ){
+            return 1;
+}
+} return 0;
+ }
+}
+
+int calcul_score(carte* tab, int taille){
+int score0 = 0;
+int socre1 = 0;
+int score2 = 0;
+int score_final;
+
+    for( int i = 0; i < taille; i++){        //calcul les carte valeur
+        if( tab[i].type ==  0){
+            score0 +=  tab[i].val;
+    } else if ( tab[i].type == 1){        //calcul les bonus +
+            score1 += tab[i].val;
+    } else {                                //verifie si il y a un X2
+score2 = 1;
+  }
+} 
+    score2 *= 2*score0;
+    if ( score2 == 0 ){
+score_final = score0 + score1;
+        
+    }else {
+        score_final = score2 + score1;
+    }
+return score_final;
+}
+
+
+int flip_7( int *tab, int taille){
+int count_seven = 0;
+    for ( int i = 0; i < taille; i++ ){        //compte le nb de crate de type 0
+    if ( tab[i].type == 0 ){
+        count_seven ++;
+} if ( count_seven == 7 ){
+        return 1;
+}
+} return 0;
+}
+
+
+
 void creation_pioche(carte*tab, int*n){
  int index=0
 
