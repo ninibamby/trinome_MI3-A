@@ -53,29 +53,27 @@ else if(type == 1 || type == 2){
 
 if(type == 0){ 
     printf("\033[%dm", couleur);
+    printf("╔═══════╗\n"); 
+    printf("| ◆  ◆ |\n");  
+    printf("|═══════|\n);                    
+    printf("|)  %d (|\n", c.val);    
+    printf("|═══════|\n");
+    printf("| ◆  ◆ |\n");
+    printf("╚═══════╝\n");
 
-    printf("╔═══════╗  
-            | ◆  ◆ |
-            |═══════|           
-            |)  %d (|     
-            |═══════|
-            | ◆  ◆ |
-            ╚═══════╝
-", c.val);
 
     printf("\033[0m ");
 }
 else if (type == 1 || type == 2){
      printf("\033[%dm", couleur);
 
-    printf("╔═══════╗  
-            | ◆  ◆ |
-            |═══════|           
-            |) +%d (|     
-            |═══════|
-            | ◆  ◆ |
-            ╚═══════╝
-", c.val);
+    printf("╔═══════╗\n");  
+    printf("| ◆  ◆ |\n");
+    printf("|═══════|\n");      
+    printf("|) %s (|\n", c.nom );          
+    printf("|═══════|\n");          
+    printf("| ◆  ◆ |\n");
+    printf("╚═══════╝\n");
 
     printf("\033[0m ");
 }
