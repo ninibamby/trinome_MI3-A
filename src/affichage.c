@@ -3,6 +3,84 @@
 #include <time.h>
 #include <string.h>
 
+void afficherCarte() {
+Carte c;
+int couleur;
+if(c.type == 0){
+    if (c.val == 0){
+        couleur = 96;
+    }
+    else if(c.val == 1){
+        couleur = 37;
+    }
+    else if(c.val == 2){
+        couleur = 33;
+    }
+    else if(c.val == 3){
+        couleur = 91;
+    }
+    else if(c.val == 4){
+        couleur = 36;
+    }
+    else if(c.val == 5){
+        couleur = 32;
+    }
+    else if(c.val == 6){
+        couleur = 35;
+    }
+    else if(c.val == 7){
+        couleur = 95;
+    }
+    else if(c.val == 8){
+        couleur = 92;
+    }
+    else if(c.val == 9){
+        couleur = 33;
+    }
+    else if(c.val == 10){
+        couleur = 31;
+    }
+    else if(c.val == 11){
+        couleur = 34;
+    }
+    else if(c.val == 12){
+        couleur = 90;
+    }
+}
+else if(type == 1 || type == 2){
+    couleur = 33;
+}
+
+if(type == 0){ 
+    printf("\033[%dm", couleur);
+
+    printf("╔═══════╗  
+            | ◆  ◆ |
+            |═══════|           
+            |)  %d (|     
+            |═══════|
+            | ◆  ◆ |
+            ╚═══════╝
+", c.val);
+
+    printf("\033[0m ");
+}
+else if (type == 1 || type == 2){
+     printf("\033[%dm", couleur);
+
+    printf("╔═══════╗  
+            | ◆  ◆ |
+            |═══════|           
+            |) +%d (|     
+            |═══════|
+            | ◆  ◆ |
+            ╚═══════╝
+", c.val);
+
+    printf("\033[0m ");
+}
+}
+
 void affiche_main( joueur j){
 printf(" votre main, %s est : \n ", j.pseudo );
 for ( int i = 0; i < j.nb_carte; i++ ){
