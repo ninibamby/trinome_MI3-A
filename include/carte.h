@@ -1,7 +1,7 @@
 #ifndef CARTES_H
 #define CARTES_H
 
-
+#include"structcarte.h"
 
  void triTabCarte( carte* tab, int taille );
 

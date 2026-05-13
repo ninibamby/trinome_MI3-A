@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include <time.h>
 
+#include "structjoueur.h"
+
 
 
     
