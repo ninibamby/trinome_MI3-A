@@ -78,7 +78,7 @@ else if (type == 1 || type == 2){
 
     printf("\033[0m ");
 }
-
+}
 
 void affiche_main( joueur j){
 printf(" votre main, %s est : \n ", j.pseudo );
