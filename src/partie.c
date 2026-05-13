@@ -7,7 +7,10 @@
 
 
 int  manche(joueur* tab_j, int nbj, carte* tab_p, int nbc){     //return 0 = pas fini 1=plus de carte 2= flip 7
-
+if ( tab_p == NULL || nbj <= 0 || tab_j == NULL ){
+        printf("erreur... impossible de lire la main du joueur \n");
+        return -1;
+    }
   int manche_fini=0;
   int res;
   int rep;
@@ -118,8 +121,12 @@ return 0;
 
 
 
-partie (joueur* tab_j,int nbj, carte* tab_p , int nbc){   //debut fct partie
-int nb_tour;
+void partie (joueur* tab_j,int nbj, carte* tab_p , int nbc){   //debut fct partie
+if ( tab_p == NULL || nbj <= 0 || tab_j == NULL ){
+        printf("erreur... impossible de lire les données \n");
+        return -1;
+    }
+  int nb_tour;
 
 melange_pioche(tab_p,nbc);
 
