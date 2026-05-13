@@ -50,12 +50,22 @@ else if(type == 1 || type == 2){
     couleur = 33;
 }
 
- 
+if(type == 0){ 
     printf("\033[%dm", couleur);
 
-    printf("[%d]", c.);
+    printf("╔═══════╗  
+            | ◆  ◆ |
+            |═══════|           
+            |)  %d  (|     
+            |═══════|
+            | ◆  ◆ |
+            ╚═══════╝
+", c.val);
 
     printf("\033[0m ");
+}
+else if (type == 1 || type == 2){
+    
 }
 
 
