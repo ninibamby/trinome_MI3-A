@@ -57,7 +57,7 @@ if(type == 0){
     printf("\033[%dm", couleur);
     printf("╔═══════╗\n"); 
     printf("| ◆  ◆ |\n");  
-    printf("|═══════|\n);                    
+    printf("|═══════|\n");                    
     printf("|)  %d (|\n", c.val);    
     printf("|═══════|\n");
     printf("| ◆  ◆ |\n");
