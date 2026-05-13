@@ -4,7 +4,11 @@
 #include <time.h>
 
 void triTabCarte( carte* tab, int taille ){        //un tri a bulle de la main du joueur 
-int desordre;
+if ( tab == NULL || n <= 0){
+    printf("erreur... la fonction n'arrive pas à lire la main du joueur \n");
+    return;
+}
+    int desordre;
 int etape = taille-1;
 carte temp;
 do{
@@ -33,6 +37,10 @@ triTabCarte( tab, taille);
 }
 
 int calcul_score(carte* tab, int taille){
+    if ( tab == NULL || taille <= 0 ){
+        printf("erreur... impossible de lire la main du joueur \n");
+        return -1;
+    }
 int score0 = 0;
 int socre1 = 0;
 int score2 = 0;
@@ -58,7 +66,11 @@ return score_final;
 }
 
 
-int flip_7( int *tab, int taille){
+int flip_7( carte* tab, int taille){
+    if ( tab == NULL || taille <= 0 ){
+        printf("erreur... impossible de lire la main du joueur \n");
+        return -1;
+    }
 int count_seven = 0;
     for ( int i = 0; i < taille; i++ ){        //compte le nb de crate de type 0
     if ( tab[i].type == 0 ){
@@ -71,7 +83,11 @@ int count_seven = 0;
 
 
 
-void creation_pioche(carte*tab, int*n){
+void creation_pioche(carte* tab, int*n){
+    if ( tab == NULL || n <= 0 ){
+        printf("erreur... impossible de lire la main du joueur \n");
+        return ;
+    }
  int index=0
 
   for(int i=0; i <12 ;i++){        //cree toute les carte numero (type 0)
@@ -132,6 +148,10 @@ tab[index].type=2;
 
 
 void melange_pioche(carte* tab,int taille){
+    if ( tab == NULL || taille <= 0 ){
+        printf("erreur... impossible de lire la main du joueur \n");
+        return ;
+    }
   carte temp;
   for (int i=0 ; i<taille ;i++){        //echange aleatoirement 2 element du tableau
     int r=srand()%taille;
