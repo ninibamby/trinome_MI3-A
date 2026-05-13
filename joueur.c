@@ -22,4 +22,18 @@ return a;
 } 
 
 
+void class_joueurs( joueur* tab, int taille ){
+
+int desordre; int etape = n-1; int temp;
+Do{
+    desordre = 0;
+for ( int i = 0; i <= etape; i++ ){
+    if( tab[i].score_final > tab[i+1].score_final ){
+    desordre = 1;
+    temp = tab[i].score_final;
+    tab[i].score_final = tab[i+1].score_final;
+    tab[i+1].score_final = temp;
+        etape --;
+}while ( desordre != 0 && etape > 0 );
+}
 
