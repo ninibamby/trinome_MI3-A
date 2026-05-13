@@ -115,3 +115,22 @@ return 0;
 
 }
 
+
+
+
+partie (joueur* tab_j,int nbj, carte* tab_p , int nbc){   //debut fct partie
+int nb_tour;
+
+melange_pioche(tab_p,nbc);
+
+do{
+int res_manche=0;
+res_manche=manche(tab_j,nbj,tab_p,nbc);
+
+affiche_resultat(tab_j,nbj,res_manche);
+
+
+
+}while(res_manche!=1 || res_manche!=2);
+
+}
