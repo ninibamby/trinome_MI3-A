@@ -5,8 +5,8 @@
 
 #include"structcarte.h"
 
-void afficherCarte() {
-Carte c;
+void afficherCarte(Carte c) {
+
 int couleur;
 if(c.type == 0){
     if (c.val == 0){
