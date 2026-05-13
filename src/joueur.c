@@ -11,7 +11,7 @@ joueur CreationJoueur(int x){ //creer le profil de chaque joueur de la partie
   char* pseudo[50]; // stock le pseudonyme de chaque joueur 
   a.numj=x;
   
-  printf (" Quelle est le pseudo du joueur %d \n ", x);
+  printf (" Quel est le pseudo du joueur %d \n ", x);
   scanf ( "%s", a.pseudo);
   a.nb_carte=0;
   a.score=0;
