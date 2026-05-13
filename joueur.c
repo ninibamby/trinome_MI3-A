@@ -36,6 +36,8 @@ for ( int i = 0; i <= etape; i++ ){
         etape --;
 }while ( desordre != 0 && etape > 0 );
 }
+}
+}
 
 
 
