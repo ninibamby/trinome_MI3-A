@@ -12,6 +12,10 @@ printf(" \n ");
 }
 
 void compte_carte(carte* tab, int n){
+    if ( tab == NULL  || n <= 0 ){
+        printf("erreur, n'arrive pas à lire la pioche ");
+        return;
+    }
 int count0=0;
 int count1=0;
 int comp0;
