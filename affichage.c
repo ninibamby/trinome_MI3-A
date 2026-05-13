@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
+#include <stdlib.h>
 
 void affiche_main( joueur j){
 printf(" votre main, %s est : \n ", j.pseudo );
