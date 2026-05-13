@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include <time.h>
 
+#include "strcutcarte.h"
+
 typedef struct{
    int numj;
    char pseudo[50];
