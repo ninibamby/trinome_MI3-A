@@ -134,3 +134,13 @@ affiche_resultat(tab_j,nbj,res_manche);
 }while(res_manche!=1 || res_manche!=2);
 
 }
+
+
+void viderBuffer() {         // supprime la saisie de l'utilisateur si celle-ci est mauvaise
+
+    char c;
+
+    do {
+        c = getchar();
+    } while (c != '\n');
+}
