@@ -4,7 +4,7 @@
 #include <time.h>
 
 void triTabCarte( carte* tab, int taille ){        //un tri a bulle de la main du joueur 
-if ( tab == NULL || n <= 0){
+if ( tab == NULL || taille <= 0){
     printf("erreur... la fonction n'arrive pas à lire la main du joueur \n");
     return;
 }
@@ -25,8 +25,12 @@ do{
 }while( etape > 0 && desordre != 0);
 }
 
-int doublon(carte* tab, int taille){        //on verifie si 2 carte de type 0 se suivent ont la meme valeur 
-triTabCarte( tab, taille);
+int doublon(carte* tab, int taille){ //on verifie si 2 carte de type 0 se suivent ont la meme valeur 
+if ( tab == NULL || taille <= 0 ){
+        printf("erreur... impossible de lire la main du joueur \n");
+        return -1;
+    }
+    triTabCarte( tab, taille);
  for(int i = 0; i < taille-1; i++ ){
     if( tab[i].type == 0 ){
          if( tab[i] == tab[i+1] ){
@@ -84,7 +88,7 @@ int count_seven = 0;
 
 
 void creation_pioche(carte* tab, int*n){
-    if ( tab == NULL || n <= 0 ){
+    if ( tab == NULL || (*n) <= 0 ){
         printf("erreur... impossible de lire la main du joueur \n");
         return ;
     }
