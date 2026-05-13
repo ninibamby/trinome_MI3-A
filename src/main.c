@@ -3,9 +3,6 @@
 #include <stdlib.h>
 #include <time.h>
 
-#include "cartes.h"
-#include "joueur.h"
-#include "affichage.h"
 #include "partie.h"
 
 

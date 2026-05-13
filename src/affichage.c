@@ -3,6 +3,8 @@
 #include <time.h>
 #include <string.h>
 
+#include"structcarte.h"
+
 void afficherCarte() {
 Carte c;
 int couleur;

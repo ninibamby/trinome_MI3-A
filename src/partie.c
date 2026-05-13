@@ -3,9 +3,9 @@
 #include <stdlib.h>
 #include <time.h>
 
-
-
-
+#include"carte.h"
+#include"joueur.h"
+#include"affichage.h"
 
 
 int  manche(joueur* tab_j, int nbj, carte* tab_p, int nbc){     //return 0 = pas fini 1=plus de carte 2= flip 7
