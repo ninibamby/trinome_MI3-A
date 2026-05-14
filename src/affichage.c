@@ -88,7 +88,7 @@ else if (type == 1 || type == 2){
 void affiche_main( joueur j){
 printf(" votre main, %s est : \n ", j.pseudo );
 for ( int i = 0; i < j.nb_carte; i++ ){
-    printf(" [%s], ", j.main[i].nom )
+    afficherCarte(main[i].nom);
 }
 printf(" \n ");
 }
