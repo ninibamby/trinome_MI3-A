@@ -62,7 +62,7 @@ int k = 1;
 
   if ( n == 1 ){
   class_joueurs( tab, taille );
-  printf(" On a un grand gagnant ! c'est %s avec %d points \n ", tab[taille-1].pseudo, tab[taille-1].score_total );
+  printf(" On a un grand gagnant ! c'est %s🏆 avec %d points \n ", tab[taille-1].pseudo, tab[taille-1].score_total );
   printf(" Le classement des joueurs est donc : \n");
     for (int i = taille-1; i > 0; i--){
     printf(" Le classement du joueur %s est : %d \n", tab[i].pseudo, j );
