@@ -28,7 +28,7 @@ int  manche(joueur* tab_j, int nbj, carte* tab_p, int* nbc){     //return 0 = pa
 
   for (int i=0; i<nbj ;i++){           //passe de joueur a joueur 
       if(tab_j[i].actif==1){
-        printf ("-------tour du joueur : %d-------\n",tab_j[i].numj);
+        printf ("\033[1m-------tour du joueur : %d-------\033[0m\n",tab_j[i].numj);
         printf ("voulez vous piocher une carte ? \n");
         printf("\n");
         compte_carte(tab_p,nbc);
