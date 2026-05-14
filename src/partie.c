@@ -116,12 +116,20 @@ int  manche(joueur* tab_j, int nbj, carte* tab_p, int* nbc){     //return 0 = pa
   }
   return 0;
 
-  }
+}
 
 
 
 
 void partie (joueur* tab_j,int nbj, carte* tab_p , int* nbc){   //debut fct partie
+
+  FILE* f=NULL;
+  int rep;
+  char nom[50];
+  char nom_fichier[55];
+  int k=0;
+
+
   if ( tab_p == NULL || nbj <= 0 || tab_j == NULL ){
     printf("💥Aïe... impossible de lire les données \n");
     return;
@@ -140,6 +148,34 @@ void partie (joueur* tab_j,int nbj, carte* tab_p , int* nbc){   //debut fct part
 
   }while(res_manche!=1 && res_manche!=2);
 
+
+  printf (" Voulez vous sauvegarder les score ? \n 1:oui \n 2:non");
+  do{
+    scanf("%d",&rep);
+    viderBuffer();
+  } while (rep!=1 && rep!=0);
+
+  printf("comment appelez vous votre fichier \n");
+  scanf("%s",nom);
+
+  do{
+    nom_fichier[k]=nom[k];
+    k++;
+  }while(nom[k]!='\0');
+  nom_fichier[k] = '.';
+  nom_fichier[k+1] = 't';
+  nom_fichier[k+2] = 'x';
+  nom_fichier[k+3] = 't';
+  nom_fichier[k+4] = '\0';
+
+  f=fopen(nom_fichier,"w");
+  if(f == NULL) {
+    printf("Erreur ouverture fichier");
+  }
+  for (int i = nbj-1; i>=0 ;i--){
+    fprintf(f, "%s : %d points\n", tab_j[i].pseudo, tab_j[i].score_total);
+  }
+  fclose(f);
 }
 
 
