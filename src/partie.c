@@ -10,7 +10,7 @@
 
 int  manche(joueur* tab_j, int nbj, carte* tab_p, int* nbc){     //return 0 = pas fini 1=plus de carte 2= flip 7
   if ( tab_p == NULL || nbj <= 0 || tab_j == NULL ){
-          printf("erreur... impossible de lire la main du joueur \n");
+          printf("💥Aïe... impossible de lire la main du joueur \n");
           return -1;
       }
     int manche_fini=0;
@@ -38,11 +38,11 @@ int  manche(joueur* tab_j, int nbj, carte* tab_p, int* nbc){     //return 0 = pa
           res=scanf(" %d",&rep);
           if (res !=1){
             viderBuffer();
-            printf("il faut entrer 1 ou 2 \n");
+            printf("⛔️il faut entrer 1 ou 2⛔️ \n");
             rep=0;
           }
           else if(rep != 1 && rep != 2){
-            printf("il faut entrer 1 ou 2 \n");
+            printf("⛔️il faut entrer 1 ou 2⛔️ \n");
           }
         }while(rep!=1 && rep!=2);
 
@@ -71,11 +71,11 @@ int  manche(joueur* tab_j, int nbj, carte* tab_p, int* nbc){     //return 0 = pa
       
           if (recherche_flip7==1){        //recherche si il y a un flip7
             tab_j[i].score=15;
-            printf (" %s a sept carte la manche est terminée \n",tab_j[i].pseudo);
+            printf (" %s a sept carte la manche est terminée !! \n",tab_j[i].pseudo);
             break;
           }   // fin recherche_flip7
           if (nbc==0){
-            printf ("la pioche est vide la manche est terminée \n");
+            printf ("la pioche est vide la manche est terminée !! \n");
             return 2;
           }
 
@@ -123,7 +123,7 @@ int  manche(joueur* tab_j, int nbj, carte* tab_p, int* nbc){     //return 0 = pa
 
 void partie (joueur* tab_j,int nbj, carte* tab_p , int* nbc){   //debut fct partie
   if ( tab_p == NULL || nbj <= 0 || tab_j == NULL ){
-    printf("erreur... impossible de lire les données \n");
+    printf("💥Aïe... impossible de lire les données \n");
     return;
   }
   int nb_tour;

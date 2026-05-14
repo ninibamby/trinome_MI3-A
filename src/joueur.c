@@ -12,7 +12,7 @@ joueur CreationJoueur(int x){ //creer le profil de chaque joueur de la partie
   joueur a;
   a.numj=x;
   
-  printf (" Quel est le pseudo du joueur %d \n ", x);
+  printf (" Joueur %d, veuillez entrer votre pseudo : \n ", x);
   scanf ( "%s", a.pseudo);
   a.nb_carte=0;
   a.score=0;
@@ -62,21 +62,44 @@ int k = 1;
 
   if ( n == 1 ){
   class_joueurs( tab, taille );
-  printf(" On a un grand gagnant ! c'est %s avec %d points \n ", tab[taille-1].pseudo, tab[taille-1].score_total );
-  printf(" Le classement des joueurs est donc : \n");
-    for (int i = taille-1; i > 0; i--){
-    printf(" Le classement du joueur %s est : %d \n", tab[i].pseudo, j );
+  int i = taille-1;
+  printf(" On a un grand gagnant ! c'est %s🏆 avec %d points \n ", tab[taille-1].pseudo, tab[taille-1].score_total );
+  printf(" 🏆CLASSEMENT DES JOUEURS🏆 \n");
+  printf(" _____________________________\n");
+  printf("| #  |  JOUEUR    | SCORE     |\n");
+  printf("|-----------------------------|\n");
+  printf("| 🥇 | %s        | %d        |\n", tab[i].pseudo, tab[i].score_total);
+  i=taille-2;
+  printf("| 🥈 | %s         | %d        |\n", tab[i].pseudo, tab[i].score_total);
+  i=taille-3;
+  printf("| 🥉 | %s         | %d        |\n", tab[i].pseudo, tab[i].score_total);
+  
+    for ( i = taille-4; i > 0; i--){
+  printf("| %d  | %s        | %d        | \n", j, tab[i].pseudo, tab[i].score_total);
     j++;
+    }
+ printf("---------------------------------\n");
     }
   }
   else if ( n == 2 ){
+  int y=taille-1;
   class_joueurs( tab, taille );
   printf(" Personne n'a réussit à obtenir 200 points durant cette partie mais nous avons quand même un gagnant ! " );
-  printf(" Le classement des joueurs est donc : \n");
-    for (int y = taille-1; y > 0; y--){
-    printf(" Le classement du joueur %s est : %d \n", tab[y].pseudo, k );
+  printf(" 🏆CLASSEMENT DES JOUEURS🏆 \n");
+  printf(" _____________________________\n");
+  printf("| #  |  JOUEUR    | SCORE     |\n");
+  printf("|-----------------------------|\n");
+  printf("| 🥇 | %s        | %d        |\n", tab[y].pseudo, tab[y].score_total);
+  y=taille-2;
+  printf("| 🥈 | %s         | %d        |\n", tab[y].pseudo, tab[y].score_total);
+  y=taille-3;
+  printf("| 🥉 | %s         | %d        |\n", tab[y].pseudo, tab[y].score_total);
+  
+    for ( y = taille-4; y > 0; y--){
+  printf("| %d  | %s        | %d        | \n", k, tab[y].pseudo, tab[y].score_total);
     k++;
     }
+ printf("---------------------------------\n");
   }
 }
 
