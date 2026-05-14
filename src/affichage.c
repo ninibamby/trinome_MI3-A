@@ -5,93 +5,129 @@
 
 #include"structcarte.h"
 
-void afficherCarte(carte c) {
+int Couleur(carte c) {
 
-int couleur;
-if(c.type == 0){
-    if (c.val == 0){
-        couleur = 96;
+    if (c.type == 0) {
+        switch(c.val) {
+            case 0:  return 96;
+            case 1:  return 37;
+            case 2:  return 33;
+            case 3:  return 91;
+            case 4:  return 36;
+            case 5:  return 32;
+            case 6:  return 35;
+            case 7:  return 95;
+            case 8:  return 92;
+            case 9:  return 93;
+            case 10: return 31;
+            case 11: return 34;
+            case 12: return 90;
+        }
     }
-    else if(c.val == 1){
-        couleur = 37;
+
+    else if (c.type == 1 || c.type == 2) {
+        return 33;
     }
-    else if(c.val == 2){
-        couleur = 33;
-    }
-    else if(c.val == 3){
-        couleur = 91;
-    }
-    else if(c.val == 4){
-        couleur = 36;
-    }
-    else if(c.val == 5){
-        couleur = 32;
-    }
-    else if(c.val == 6){
-        couleur = 35;
-    }
-    else if(c.val == 7){
-        couleur = 95;
-    }
-    else if(c.val == 8){
-        couleur = 92;
-    }
-    else if(c.val == 9){
-        couleur = 33;
-    }
-    else if(c.val == 10){
-        couleur = 31;
-    }
-    else if(c.val == 11){
-        couleur = 34;
-    }
-    else if(c.val == 12){
-        couleur = 90;
-    }
-}
-else if(c.type == 1 || c.type == 2){
-    couleur = 33;
+
+return 37;
 }
 
-if(type == 0){ 
-    printf("\033[%dm", couleur);
-    printf("╔═══════╗\n"); 
-    printf("| ◆   ◆ |\n");  
-    printf("|═══════|\n");                    
-    printf("|)  %d (|\n", c.val);    
-    printf("|═══════|\n");
-    printf("| ◆   ◆ |\n");
-    printf("╚═══════╝\n");
+void affiche_main(joueur j) {
 
+    int max = 6;
 
-    printf("\033[0m ");
+    printf("\nMain de %s :\n\n", j.pseudo);
+
+    for (int debut = 0; debut < j.nb_carte; debut += max) {
+
+        int fin = debut + max;
+
+        if (fin > j.nb_carte) {
+            fin = j.nb_carte;
+        }
+
+       
+
+        // Ligne 1
+        for (int i = debut; i < fin; i++) {
+            int couleur = Couleur(j.main[i]);
+
+            printf("\033[%dm", couleur);
+            printf("╔═══════╗   ");
+            printf("\033[0m");
+        }
+        printf("\n");
+
+        // Ligne 2
+        for (int i = debut; i < fin; i++) {
+            int couleur = Couleur(j.main[i]);
+
+            printf("\033[%dm", couleur);
+            printf("| ◆   ◆ |   ");
+             printf("\033[0m");
+
+        }
+        printf("\n");
+
+        // Ligne 3
+        for (int i = debut; i < fin; i++) {
+            int couleur = Couleur(j.main[i]);
+
+            printf("\033[%dm", couleur);
+            printf("|═══════|   ");
+            printf("\033[0m");
+        }
+        printf("\n");
+
+        // Ligne centrale
+        for (int i = debut; i < fin; i++) {
+            int couleur = Couleur(j.main[i]);
+
+            printf("\033[%dm", couleur);
+
+            if (j.main[i].type == 0) {
+                printf("|) %2d  (|   ", j.main[i].val);
+            }
+            else {
+                printf("|) %-3s (|   ", j.main[i].nom);
+            }
+            printf("\033[0m");
+        }
+        printf("\n");
+
+        // Ligne 5
+        for (int i = debut; i < fin; i++) {
+            int couleur = Couleur(j.main[i]);
+
+            printf("\033[%dm", couleur);
+            printf("|═══════|   ");
+            printf("\033[0m");
+
+        }
+        printf("\n");
+
+        // Ligne 6
+        for (int i = debut; i < fin; i++) {
+            int couleur = Couleur(j.main[i]);
+
+            printf("\033[%dm", couleur);
+            printf("| ◆   ◆ |   ");
+            printf("\033[0m");
+        }
+        printf("\n");
+
+        // Ligne 7
+        for (int i = debut; i < fin; i++) {
+            int couleur = Couleur(j.main[i]);
+
+            printf("\033[%dm", couleur);
+            printf("╚═══════╝   ");
+            printf("\033[0m");
+        }
+        printf("\n\n");
+    }
 }
-else if (c.type == 1 || c.type == 2){
-     printf("\033[%dm", couleur);
 
-    printf("╔═══════╗\n");  
-    printf("| ◆   ◆ |\n");
-    printf("|═══════|\n");      
-    printf("|) %s (|\n", c.nom );          
-    printf("|═══════|\n");          
-    printf("| ◆   ◆ |\n");
-    printf("╚═══════╝\n");
-
-    printf("\033[0m ");
-}
-}
-
-
-
-
-
-void affiche_main( joueur j){
-printf(" votre main, %s est : \n ", j.pseudo );
-for ( int i = 0; i < j.nb_carte; i++ ){
-    afficherCarte(j.main[i]);
-}
-printf("\n");
-}
 
 
 

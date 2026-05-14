@@ -3,7 +3,7 @@
 
 #include"structcarte.h"
 
-void afficherCarte(Carte c);
+int Couleur(carte c);
 
 void affiche_main( joueur j);
 
