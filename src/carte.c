@@ -22,8 +22,8 @@ do{
             temp = tab[i];
             tab[i] = tab[i+1];
             tab[i+1] = temp;
-}
-} etape--;
+        }
+    } etape--;
 }while( etape > 0 && desordre != 0);
 }
 
@@ -35,11 +35,12 @@ if ( tab == NULL || taille <= 0 ){
     triTabCarte( tab, taille);
  for(int i = 0; i < taille-1; i++ ){
     if( tab[i].type == 0 ){
-         if( tab[i] == tab[i+1] ){
+         if( tab[i].val == tab[i+1].val ){
             return 1;
-}
-} return 0;
+        }
+    } 
  }
+return 0;
 }
 
 int calcul_score(carte* tab, int taille){
@@ -48,7 +49,7 @@ int calcul_score(carte* tab, int taille){
         return -1;
     }
 int score0 = 0;
-int socre1 = 0;
+int score1 = 0;
 int score2 = 0;
 int score_final;
 
@@ -94,37 +95,50 @@ void creation_pioche(carte* tab, int*n){
         printf("erreur... impossible de lire la main du joueur \n");
         return ;
     }
- int index=0
+ int index = 0;
+//generartion de la carte 0
+
+tab[index].nom[0] = '0';
+tab[index].nom[1] = '\0';
+
+tab[index].val = 1;
+tab[index].type = 0;
+index++;
+
 
   for(int i=0; i <12 ;i++){        //cree toute les carte numero (type 0)
-    for (int K=0; K<i; k++){ 
-      if (i<10){
+    for (int K=0; K<i; K++){ 
+
+      if (i>0 && i<10){
       tab[index].nom[0]=('0'+i);
+      tab[index].nom[1]='\0';
       tab[index].val=i;
       tab[index].type=0;
       }
-      else if (i=10){
+      else if (i==10){
       tab[index].nom[0]='1';
       tab[index].nom[1]='0';
+      tab[index].nom[2]='\0';
       tab[index].val=i;
       tab[index].type=0;
       }
-      else if (i=11){
+      else if (i==11){
       tab[index].nom[0]='1';
       tab[index].nom[1]='1';
+      tab[index].nom[2]='\0';
       tab[index].val=i;
       tab[index].type=0;
       }
-      else if (i=12){
+      else if (i==12){
       tab[index].nom[0]='1';
       tab[index].nom[1]='2';
+      tab[index].nom[2]='\0';
       tab[index].val=i;
       tab[index].type=0;
       }
       index++;
     }
   }
-tab[0].val=1;
 
 strcpy(tab[index].nom, "+4");        //cree tout les bonus (type 1)
 tab[index].val=4;
@@ -160,7 +174,7 @@ void melange_pioche(carte* tab,int taille){
     }
   carte temp;
   for (int i=0 ; i<taille ;i++){        //echange aleatoirement 2 element du tableau
-    int r=srand()%taille;
+    int r = rand() % taille;
     temp=tab[i];
     tab[i]=tab[r];
     tab[r]=temp;
