@@ -29,7 +29,7 @@ do{
 
 int doublon(carte* tab, int taille){ //on verifie si 2 carte de type 0 se suivent ont la meme valeur 
 if ( tab == NULL || taille <= 0 ){
-        printf("erreur... impossible de lire la main du joueur \n");
+        printf("💥Aïe... impossible de lire la main du joueur \n");
         return -1;
     }
     triTabCarte( tab, taille);
@@ -45,7 +45,7 @@ return 0;
 
 int calcul_score(carte* tab, int taille){
     if ( tab == NULL || taille <= 0 ){
-        printf("erreur... impossible de lire la main du joueur \n");
+        printf("💥Aïe... impossible de lire la main du joueur \n");
         return -1;
     }
 int score0 = 0;
@@ -75,7 +75,7 @@ return score_final;
 
 int flip_7( carte* tab, int taille){
     if ( tab == NULL || taille <= 0 ){
-        printf("erreur... impossible de lire la main du joueur \n");
+        printf("💥Aïe... impossible de lire la main du joueur \n");
         return -1;
     }
 int count_seven = 0;
@@ -92,7 +92,7 @@ int count_seven = 0;
 
 void creation_pioche(carte* tab, int*n){
     if ( tab == NULL || (*n) <= 0 ){
-        printf("erreur... impossible de lire la main du joueur \n");
+        printf("💥Aïe... impossible de lire la main du joueur \n");
         return ;
     }
  int index = 0;
@@ -169,7 +169,7 @@ tab[index].type=2;
 
 void melange_pioche(carte* tab,int taille){
     if ( tab == NULL || taille <= 0 ){
-        printf("erreur... impossible de lire la main du joueur \n");
+        printf("💥Aïe... impossible de lire la main du joueur \n");
         return ;
     }
   carte temp;
