@@ -70,11 +70,21 @@ int k = 1;
     }
   }
   else if ( n == 2 ){
+  int y=taille-1;
   class_joueurs( tab, taille );
   printf(" Personne n'a réussit à obtenir 200 points durant cette partie mais nous avons quand même un gagnant ! " );
-  printf(" Le classement des joueurs est donc : \n");
-    for (int y = taille-1; y > 0; y--){
-    printf(" Le classement du joueur %s est : %d \n", tab[y].pseudo, k );
+  printf(" 🏆CLASSEMENT DES JOUEURS🏆 \n");
+  printf(" _____________________________\n");
+  printf("| #  |  JOUEUR    | SCORE     |\n");
+  printf("|-----------------------------|\n");
+  printf("| 🥇 | %s        | %d        |\n", tab[y].pseudo, tab[y].score_total);
+  y=taille-2;
+  printf("| 🥈 | %s         | %d        |\n", tab[y].pseudo, tab[y].score_total);
+  y=taille-3;
+  printf("| 🥉 | %s         | %d
+  
+    for ( y = taille-4; y > 0; y--){
+  printf("| %d  | %s        | %d        | \n", k, tab[y].pseudo, tab[y].score_total);
     k++;
     }
   }
