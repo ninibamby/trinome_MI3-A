@@ -68,14 +68,14 @@ int k = 1;
   printf(" _____________________________\n");
   printf("| #  |  JOUEUR    | SCORE     |\n");
   printf("|-----------------------------|\n");
-  printf("| 🥇 | %s        | %d        |\n", tab[i].pseudo, tab[i].score_total);
+  printf("| 🥇 | %-10s        | %8d        |\n", tab[i].pseudo, tab[i].score_total);
   i=taille-2;
-  printf("| 🥈 | %s         | %d        |\n", tab[i].pseudo, tab[i].score_total);
+  printf("| 🥈 | %-10s         | %8d        |\n", tab[i].pseudo, tab[i].score_total);
   i=taille-3;
-  printf("| 🥉 | %s         | %d        |\n", tab[i].pseudo, tab[i].score_total);
+  printf("| 🥉 | %-10s         | %8d        |\n", tab[i].pseudo, tab[i].score_total);
   
     for ( i = taille-4; i > 0; i--){
-  printf("| %d  | %s        | %d        | \n", j, tab[i].pseudo, tab[i].score_total);
+  printf("| %d  | %-10s        | %8d        | \n", j, tab[i].pseudo, tab[i].score_total);
     j++;
     }
  printf("---------------------------------\n");
@@ -89,14 +89,14 @@ int k = 1;
   printf(" _____________________________\n");
   printf("| #  |  JOUEUR    | SCORE     |\n");
   printf("|-----------------------------|\n");
-  printf("| 🥇 | %s        | %d        |\n", tab[y].pseudo, tab[y].score_total);
+  printf("| 🥇 | %-10s        | %8d        |\n", tab[y].pseudo, tab[y].score_total);
   y=taille-2;
-  printf("| 🥈 | %s         | %d        |\n", tab[y].pseudo, tab[y].score_total);
+  printf("| 🥈 | %-10s         | %8d        |\n", tab[y].pseudo, tab[y].score_total);
   y=taille-3;
-  printf("| 🥉 | %s         | %d        |\n", tab[y].pseudo, tab[y].score_total);
+  printf("| 🥉 | %-10s         | %8d        |\n", tab[y].pseudo, tab[y].score_total);
   
     for ( y = taille-4; y > 0; y--){
-  printf("| %d  | %s        | %d        | \n", k, tab[y].pseudo, tab[y].score_total);
+  printf("| %d  | %-10s        | %8d        | \n", k, tab[y].pseudo, tab[y].score_total);
     k++;
     }
  printf("---------------------------------\n");
