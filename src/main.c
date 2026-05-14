@@ -11,7 +11,6 @@ int main(){
 srand(time(NULL));
 int nbj;                        // nb de joueurs ds la partie
 int verif;                      // verificateur de nbj
-int nbj;                        // nb de joueur
 carte pioche[85];
 int taille_pioche=85;
 
@@ -25,7 +24,7 @@ verif = scanf ("%d", &nbj);
         printf(" Il faut entrer un entier positif ! \n ");
         nbj = 0;
     } else if (nbj<2){
-  printf("Pas assez de joueurs");   // message d'erreur si nb joueurs < 2
+  printf("Pas assez de joueurs\n");   // message d'erreur si nb joueurs < 2
 }
 }while(nbj<2);//demande du nombre de joueur
 
@@ -33,8 +32,8 @@ joueur tab_joueur[nbj];
 
 
 
-for(int i=1; i <=nbj ; i++){
-tab_joueur[i-1]=CreationJoueur(i);
+for(int i = 0; i < nbj; i++){
+    tab_joueur[i] = CreationJoueur(i + 1);
 }
  printf("\n--- JOUEURS ---\n");
 
