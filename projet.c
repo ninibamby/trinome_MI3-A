@@ -495,7 +495,118 @@ return 0;
 
 
 
+void affiche_main(joueur j) {
 
+    int max = 6;
+
+    printf("\nMain de %s :\n\n", j.pseudo);
+
+    for (int debut = 0; debut < j.nb_carte; debut += max) {
+      
+        int fin = debut + max;
+
+        if (fin > j.nb_carte) {
+            fin = j.nb_carte;
+        }
+
+        
+        int couleur;
+if(c.type == 0){
+    if (c.val == 0){
+        couleur = 96;
+    }
+    else if(c.val == 1){
+        couleur = 37;
+    }
+    else if(c.val == 2){
+        couleur = 33;
+    }
+    else if(c.val == 3){
+        couleur = 91;
+    }
+    else if(c.val == 4){
+        couleur = 36;
+    }
+    else if(c.val == 5){
+        couleur = 32;
+    }
+    else if(c.val == 6){
+        couleur = 35;
+    }
+    else if(c.val == 7){
+        couleur = 95;
+    }
+    else if(c.val == 8){
+        couleur = 92;
+    }
+    else if(c.val == 9){
+        couleur = 33;
+    }
+    else if(c.val == 10){
+        couleur = 31;
+    }
+    else if(c.val == 11){
+        couleur = 34;
+    }
+    else if(c.val == 12){
+        couleur = 90;
+    }
+}
+else if(c.type == 1 || c.type == 2){
+    couleur = 33;
+}
+
+
+
+        // Ligne 1
+        for (int i = debut; i < fin; i++) {
+            printf("╔═══════╗   ");
+        }
+        printf("\n");
+
+        // Ligne 2
+        for (int i = debut; i < fin; i++) {
+            printf("| ◆   ◆ |   ");
+        }
+        printf("\n");
+
+        // Ligne 3
+        for (int i = debut; i < fin; i++) {
+            printf("|═══════|   ");
+        }
+        printf("\n");
+
+        // Ligne centrale
+        for (int i = debut; i < fin; i++) {
+
+            if (j.main[i].type == 0) {
+                printf("|) %2d  (|   ", j.main[i].val);
+            }
+            else {
+                printf("|) %-3s (|   ", j.main[i].nom);
+            }
+        }
+        printf("\n");
+
+        // Ligne 5
+        for (int i = debut; i < fin; i++) {
+            printf("|═══════|   ");
+        }
+        printf("\n");
+
+        // Ligne 6
+        for (int i = debut; i < fin; i++) {
+            printf("| ◆   ◆ |   ");
+        }
+        printf("\n");
+
+        // Ligne 7
+        for (int i = debut; i < fin; i++) {
+            printf("╚═══════╝   ");
+        }
+        printf("\n\n");
+    }
+}
 
 
 
