@@ -71,11 +71,11 @@ int  manche(joueur* tab_j, int nbj, carte* tab_p, int* nbc){     //return 0 = pa
       
           if (recherche_flip7==1){        //recherche si il y a un flip7
             tab_j[i].score=15;
-            printf (" %s a sept carte la manche est terminée \n",tab_j[i].pseudo);
+            printf (" %s a sept carte la manche est terminée !! \n",tab_j[i].pseudo);
             break;
           }   // fin recherche_flip7
           if (nbc==0){
-            printf ("la pioche est vide la manche est terminée \n");
+            printf ("la pioche est vide la manche est terminée !! \n");
             return 2;
           }
 
