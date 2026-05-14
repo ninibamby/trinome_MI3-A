@@ -6,11 +6,9 @@ SRC = src/main.c \
       src/affichage.c \
       src/carte.c \
       src/joueur.c \
-      src/partie.c \
-      src/structcarte.c \
-      src/structjoueur.c
+      src/partie.c 
 
-EXEC = Flip7
+EXEC = FlipTech
 
 all:
 	$(CC) $(SRC) $(CFLAGS) -o $(EXEC)
