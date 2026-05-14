@@ -30,14 +30,14 @@ int etape = taille-1;
 int temp;
 
 do{
-    desordre = 0;
+  desordre = 0;
   for ( int i = 0; i <= etape; i++ ){
     if( tab[i].score_total > tab[i+1].score_total ){
-    desordre = 1;
-    temp = tab[i].score_total;
-    tab[i].score_total = tab[i+1].score_total;
-    tab[i+1].score_total = temp;
-        etape --;
+      desordre = 1;
+      temp = tab[i].score_total;
+      tab[i].score_total = tab[i+1].score_total;
+      tab[i+1].score_total = temp;
+      etape --;
     }
   }
 }while ( desordre != 0 && etape > 0 );
@@ -48,13 +48,13 @@ do{
 
 void affiche_resultat( joueur* tab, int taille, int n){
   if( tab == NULL ){
-return;
+    return;
   }
   if ( taille <= 0 ){
-return;
+    return;
   }
   if ( n != 1 && n != 2 ){
-return;
+    return;
   }
 
 int j = 1;
