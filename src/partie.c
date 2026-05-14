@@ -123,7 +123,7 @@ int  manche(joueur* tab_j, int nbj, carte* tab_p, int* nbc){     //return 0 = pa
 
 void partie (joueur* tab_j,int nbj, carte* tab_p , int* nbc){   //debut fct partie
   if ( tab_p == NULL || nbj <= 0 || tab_j == NULL ){
-    printf("erreur... impossible de lire les données \n");
+    printf("💥Aïe... impossible de lire les données \n");
     return;
   }
   int nb_tour;
