@@ -62,11 +62,23 @@ int k = 1;
 
   if ( n == 1 ){
   class_joueurs( tab, taille );
+  int i = taille-1;
   printf(" On a un grand gagnant ! c'est %s🏆 avec %d points \n ", tab[taille-1].pseudo, tab[taille-1].score_total );
-  printf(" Le classement des joueurs est donc : \n");
-    for (int i = taille-1; i > 0; i--){
-    printf(" Le classement du joueur %s est : %d \n", tab[i].pseudo, j );
+  printf(" 🏆CLASSEMENT DES JOUEURS🏆 \n");
+  printf(" _____________________________\n");
+  printf("| #  |  JOUEUR    | SCORE     |\n");
+  printf("|-----------------------------|\n");
+  printf("| 🥇 | %s        | %d        |\n", tab[i].pseudo, tab[i].score_total);
+  i=taille-2;
+  printf("| 🥈 | %s         | %d        |\n", tab[i].pseudo, tab[i].score_total);
+  i=taille-3;
+  printf("| 🥉 | %s         | %d        |\n", tab[i].pseudo, tab[i].score_total);
+  
+    for ( i = taille-4; i > 0; i--){
+  printf("| %d  | %s        | %d        | \n", j, tab[i].pseudo, tab[i].score_total);
     j++;
+    }
+ printf("---------------------------------\n");
     }
   }
   else if ( n == 2 ){
