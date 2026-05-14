@@ -7,7 +7,7 @@
 
 void triTabCarte( carte* tab, int taille ){        //un tri a bulle de la main du joueur 
 if ( tab == NULL || taille <= 0){
-    printf("erreur... la fonction n'arrive pas à lire la main du joueur \n");
+    printf("💥Aïe... la fonction n'arrive pas à lire la main du joueur \n");
     return;
 }
     int desordre;
