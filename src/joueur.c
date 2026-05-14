@@ -81,12 +81,13 @@ int k = 1;
   y=taille-2;
   printf("| 🥈 | %s         | %d        |\n", tab[y].pseudo, tab[y].score_total);
   y=taille-3;
-  printf("| 🥉 | %s         | %d
+  printf("| 🥉 | %s         | %d        |\n", tab[y].pseudo, tab[y].score_total);
   
     for ( y = taille-4; y > 0; y--){
   printf("| %d  | %s        | %d        | \n", k, tab[y].pseudo, tab[y].score_total);
     k++;
     }
+ printf("---------------------------------\n");
   }
 }
 
