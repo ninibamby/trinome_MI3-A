@@ -84,7 +84,7 @@ int k = 1;
   else if ( n == 2 ){
   int y=taille-1;
   class_joueurs( tab, taille );
-  printf(" Personne n'a réussit à obtenir 200 points durant cette partie mais nous avons quand même un gagnant ! " );
+  printf(" Personne n'a réussit à obtenir 200 points durant cette partie mais nous avons quand même un gagnant ! \n" );
   printf(" 🏆CLASSEMENT DES JOUEURS🏆 \n");
   printf(" _____________________________\n");
   printf("| #  |  JOUEUR    | SCORE     |\n");
