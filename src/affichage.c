@@ -155,10 +155,16 @@ int comp0;
 int comp1;
 char nom_c[3];
 
+printf(ROUGE_CLAIR"┌─────────────────────────────────────────┐\n"RESET);
+printf(ROUGE_CLAIR"│"RESET);
+printf( "   Cartes restantes dans la pioche:        ");
+printf(ROUGE_CLAIR"│\n"RESET);
+printf(ROUGE_CLAIR"├─────────────────────────────────────────┤\n" RESET);
+
 for (int i=0 ; i<n ;i++){        //compte les 0 et 1
 comp0=strcmp("0",tab[i].nom);
 comp1=strcmp("1",tab[i].nom);
-  if (tab[i].type == 0 && comp0 == 0){
+  if (tab[i].type == 0 && comp0 == 0){              
   count0++;
   }
   if (tab[i].type == 0 && comp1 == 0){
@@ -166,17 +172,14 @@ comp1=strcmp("1",tab[i].nom);
   }
 }
 
-      
-printf(ROUGE_CLAIR"┌─────────────────────────────────────────┐\n"RESET);
-printf(ROUGE_CLAIR"│"RESET);
-printf( "   Cartes restantes dans la pioche:        ");
-printf(ROUGE_CLAIR"│\n"RESET);
-printf(ROUGE_CLAIR"├─────────────────────────────────────────┤\n" RESET);
-
-
+if(count0>0){           //affiche le nb de 0 et 1
 printf("  il reste %-2d %c\n", count0, '0');
+}
+if(count1>0){
 printf("  il reste %-2d %c\n", count1, '1');
+}
 
+//compte les carte de type 0 et affiche 
 for (int k = 2; k <= 12; k++) {
 
     int count = 0;
@@ -193,6 +196,7 @@ if(count>0){
     printf("  il reste %-2d %s\n", count, nom_c);
 }
 }
+//compte les carte bonus + et les affiche 
 
 for (int k = 2; k <= 10; k += 2) {
 
@@ -211,8 +215,9 @@ if(count2>0){
 }
 }
 
-int countX2 = 0;
+//compte si il y a un X2 et affiche
 
+int countX2 = 0;
 for (int i = 0; i < n; i++) {
 
     if (tab[i].type == 2) {

@@ -23,7 +23,7 @@ return a;
 } 
 
 
-void class_joueurs( joueur* tab, int taille ){
+void class_joueurs( joueur* tab, int taille ){        //tri a bulle pour classer les joueurs
 
 int desordre; 
 int etape = taille-1; 
@@ -47,6 +47,7 @@ do{
 
 
 void affiche_resultat( joueur* tab, int taille, int n){
+      //verif des parametres 
   if( tab == NULL ){
     return;
   }
@@ -60,9 +61,9 @@ void affiche_resultat( joueur* tab, int taille, int n){
 int j = 1;
 int k = 1;
 
-  if ( n == 1 ){
+  if ( n == 1 ){    //victoire par 200 points
     class_joueurs( tab, taille );
-    if(taille=2){
+    if(taille=2){     //pour 2 joueurs
       int i = taille-1;
       printf(" On a un grand gagnant ! c'est %s🏆 avec %d points \n ", tab[taille-1].pseudo, tab[taille-1].score_total );
       printf(" 🏆CLASSEMENT DES JOUEURS🏆 \n");
@@ -74,7 +75,7 @@ int k = 1;
       printf("| 🥈 | %-10s         | %8d        |\n", tab[i].pseudo, tab[i].score_total);
       printf("---------------------------------\n");
     }
-    else{
+    else{       //pour plus de 2 joueurs
     
     int i = taille-1;
     printf(" On a un grand gagnant ! c'est %s🏆 avec %d points \n ", tab[taille-1].pseudo, tab[taille-1].score_total );
@@ -95,9 +96,9 @@ int k = 1;
     }
   }
   
-  else if ( n == 2 ){
+  else if ( n == 2 ){         //plus de carte
     class_joueurs( tab, taille );
-    if(taille=2){
+    if(taille=2){     //pour 2 joueurs
       int y=taille-1;
       
     printf(" Personne n'a réussit à obtenir 200 points durant cette partie mais nous avons quand même un gagnant ! \n" );
@@ -112,7 +113,7 @@ int k = 1;
 
     printf("---------------------------------\n");
     }
-  else{
+  else{       //pour plus de 2 joueurs
   int y=taille-1;
   class_joueurs( tab, taille );
   printf(" Personne n'a réussit à obtenir 200 points durant cette partie mais nous avons quand même un gagnant ! \n" );

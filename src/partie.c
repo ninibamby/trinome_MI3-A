@@ -145,7 +145,7 @@ void partie (joueur* tab_j,int nbj, carte* tab_p , int* nbc){   //debut fct part
   }
   int nb_tour;
 
-  melange_pioche(tab_p,(*nbc));
+  melange_pioche(tab_p,(*nbc));   //appel la fct melange_pioche
   int res_manche=0;
   do{
     res_manche=0;
@@ -157,20 +157,22 @@ void partie (joueur* tab_j,int nbj, carte* tab_p , int* nbc){   //debut fct part
 
   }while(res_manche!=1 && res_manche!=2);
 
+  //sauvegarde dans le fichier
 
-  printf (" Voulez vous sauvegarder les score ? \n 1:oui \n 2:non");
+  printf (" Voulez vous sauvegarder les score ? \n 1:oui \n 2:non");      //demande si on sauvegarde
   do{
     scanf("%d",&rep);
     viderBuffer();
   } while (rep!=1 && rep!=2);
-if (rep==1){
+
+if (rep==1){                //si on sauvegarde
   printf("comment appelez vous votre fichier \n");
   scanf("%s",nom);
 
   do{
     nom_fichier[k]=nom[k];
     k++;
-  }while(nom[k]!='\0');
+  }while(nom[k]!='\0');             //ajoute le .txt
   nom_fichier[k] = '.';
   nom_fichier[k+1] = 't';
   nom_fichier[k+2] = 'x';

@@ -35,7 +35,7 @@ joueur tab_joueur[nbj];
 for(int i = 0; i < nbj; i++){
     tab_joueur[i] = CreationJoueur(i + 1);
 }
- printf("\n--- JOUEURS ---\n");
+ printf("\n--- JOUEURS ---\n");                     //affiche les joueurs
 
     for(int i = 0; i < nbj; i++){
         printf("%d : %s\n", tab_joueur[i].numj, tab_joueur[i].pseudo);
