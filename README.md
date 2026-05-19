@@ -14,3 +14,9 @@ Dans le terminal, placez-vous dans le dossier du projet puis tapez :
 
 ```bash
 make
+
+ensuite
+
+FlipTech
+
+./FlipTech
