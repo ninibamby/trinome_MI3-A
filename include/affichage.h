@@ -10,7 +10,7 @@
 #define CYAN           "\033[36m"
 #define VERT           "\033[32m"
 #define VIOLET         "\033[35m"
-#define VIOLET_BRIGHT  "\033[95m"
+#define VIOLET_BRILLIANT  "\033[95m"
 #define VERT_CLAIR     "\033[92m"
 #define JAUNE_CLAIR    "\033[93m"
 #define ROUGE          "\033[31m"
