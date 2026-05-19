@@ -25,33 +25,33 @@ La partie se termine lorsqu’un joueur atteint 200 points ou lorsque la pioche 
 
 ---
 
-# Installation et lancement
+## Installation et lancement
 
-## Cloner le projet depuis GitHub
+### Cloner le projet depuis GitHub
 
 ```bash
 git clone LIEN_DU_GITHUB
 ```
 
-## Entrer dans le dossier du projet
+### Entrer dans le dossier du projet
 
 ```bash
 cd FlipTech
 ```
 
-## Compiler le projet
+### Compiler le projet
 
 ```bash
 make
 ```
 
-## Lancer le jeu
+### Lancer le jeu
 
 ```bash
 ./FlipTech
 ```
 
-## Nettoyer les fichiers compilés
+### Nettoyer les fichiers compilés
 
 ```bash
 make clean
@@ -59,7 +59,7 @@ make clean
 
 ---
 
-# Organisation du projet
+## Organisation du projet
 
 ```text
 FlipTech
@@ -108,6 +108,6 @@ FlipTech
 
 # Membres du projet
 
-- Nom Prénom
-- Nom Prénom
+- PAYET Nino
+- GIL-THELIER Valentin
 - Nom Prénom
