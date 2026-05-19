@@ -3,7 +3,7 @@
 #include <time.h>
 #include <string.h>
 
-#include"structcarte.h"
+#include"structjoueur.h"
 
 int Couleur(carte c) {
 
