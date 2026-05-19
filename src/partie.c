@@ -160,7 +160,7 @@ void partie (joueur* tab_j,int nbj, carte* tab_p , int* nbc){   //debut fct part
 
   //sauvegarde dans le fichier
 
-  printf (" Voulez vous sauvegarder les score ? \n 1:oui \n 2:non");      //demande si on sauvegarde
+  printf (" Voulez vous sauvegarder les score ? \n 1:oui \n 2:non \n");      //demande si on sauvegarde
   do{
     scanf("%d",&rep);
     viderBuffer();
@@ -190,7 +190,7 @@ if (rep==1){                //si on sauvegarde
   fclose(f);
 }
 printf("\n");
-printf(" ----------- FIN DE LA PARTIE --------");
+printf(" ----------- FIN DE LA PARTIE -------- \n");
 
 }
 
