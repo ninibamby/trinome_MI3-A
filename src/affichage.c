@@ -172,9 +172,9 @@ comp1=strcmp("1",tab[i].nom);
   }
 }
 
-<<<<<<< HEAD
-         //affiche le nb de 0 et 1
-=======
+
+        
+
       
 printf(ROUGE_CLAIR"┌─────────────────────────────────────────┐\n"RESET);
 printf(ROUGE_CLAIR"│"RESET);
@@ -183,8 +183,8 @@ printf(ROUGE_CLAIR"│\n"RESET);
 printf(ROUGE_CLAIR"├─────────────────────────────────────────┤\n" RESET);
 
 
->>>>>>> 27d1ee8ccdb3d68671ece6a4c4c70e176ee92a3c
 
+   //affiche le nb de 0 et 1
 if(count0>0){  
 printf("  il reste %-2d %c\n", count0, '0');
 }
