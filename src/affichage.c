@@ -169,7 +169,7 @@ comp1=strcmp("1",tab[i].nom);
       
 printf(ROUGE_CLAIR"┌─────────────────────────────────────────┐\n"RESET);
 printf(ROUGE_CLAIR"│"RESET);
-printf( "   Cartes restantes dans la pioche:        ");
+printf( "   Cartes restantes dans la pioche:      ");
 printf(ROUGE_CLAIR"│\n"RESET);
 printf(ROUGE_CLAIR"├─────────────────────────────────────────┤\n" RESET);
 
