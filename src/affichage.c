@@ -184,8 +184,9 @@ for (int k = 2; k <= 12; k++) {
             strcpy(nom_c, tab[i].nom);
         }
     }
-
+if(count>0){
     printf("  il reste %-2d %s\n", count, nom_c);
+}
 }
 
 for (int k = 2; k <= 10; k += 2) {
