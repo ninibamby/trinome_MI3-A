@@ -89,7 +89,7 @@ FlipTech
 - Options de compilation :
 
 ```bash
--Wall -Wextra -g
+-Wall -Wextra -Iinclude
 ```
 
 ---
