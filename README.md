@@ -82,7 +82,7 @@ FlipTech
 
 ---
 
-# Compilation utilisée
+## Compilation utilisée
 
 - GCC
 - Linux
@@ -94,7 +94,7 @@ FlipTech
 
 ---
 
-# Fonctionnalités
+## Fonctionnalités
 
 - Gestion des joueurs
 - Gestion des cartes
@@ -108,6 +108,6 @@ FlipTech
 
 # Membres du projet
 
-- PAYET Nino
+- **PAYET Nino**
 - GIL-THELIER Valentin
 - Nom Prénom
