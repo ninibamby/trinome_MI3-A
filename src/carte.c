@@ -106,7 +106,7 @@ tab[index].type = 0;
 index++;
 
 
-  for(int i=0; i <12 ;i++){        //cree toute les carte numero (type 0)
+  for(int i=0; i <13 ;i++){        //cree toute les carte numero (type 0)
     for (int K=0; K<i; K++){ 
 
       if (i>0 && i<10){

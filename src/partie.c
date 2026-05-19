@@ -103,8 +103,13 @@ int  manche(joueur* tab_j, int nbj, carte* tab_p, int* nbc){     //return 0 = pa
   // compte point 
 
   for (int i=0 ; i<nbj ;i++){
+    if(tab_j.nb_carte==0){
+      tab_j[i].score=0;
+    }
+    else {
     int nb_cartem=tab_j[i].nb_carte;
     tab_j[i].score=calcul_score(tab_j[i].main,nb_cartem);
+    }
     tab_j[i].score_total+=tab_j[i].score;
     printf (" le score de %s est de %d sur cette manche \n score total de ce joueur : %d\n",tab_j[i].pseudo,tab_j[i].score,tab_j[i].score_total);
 

@@ -50,7 +50,7 @@ void affiche_resultat( joueur* tab, int taille, int n){
   if( tab == NULL ){
     return;
   }
-  if ( taille <= 0 ){
+  if ( taille < 0 ){
     return;
   }
   if ( n != 1 && n != 2 ){
