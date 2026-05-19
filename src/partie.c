@@ -108,7 +108,7 @@ printf("\n\n");
 
   for (int i=0 ; i<nbj ;i++){
     if(tab_j.nb_carte==0){
-      tab_j[i].score=0;
+      tab_j[i]->score=0;
     }
     else {
     int nb_cartem=tab_j[i].nb_carte;
@@ -139,7 +139,7 @@ void partie (joueur* tab_j,int nbj, carte* tab_p , int* nbc){   //debut fct part
   int k=0;
  int NBC=*nbc;
 
-  if ( tab_p == NULL || nbj <= 0 || tab_j == NULL ){
+  if ( tab_p == NULL || nbj < 0 || tab_j == NULL ){
     printf("💥Aïe... impossible de lire les données \n");
     return;
   }
