@@ -16,6 +16,7 @@
 #define ROUGE          "\033[31m"
 #define BLEU           "\033[34m"
 #define GRIS_FONCE     "\033[90m"
+#define ROUGE_CLAIR_GRAS "\033[1;91m"
 
 #define RESET          "\033[0m"
 
