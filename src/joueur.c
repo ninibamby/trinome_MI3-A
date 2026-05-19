@@ -4,6 +4,8 @@
 #include <time.h>
 
 #include "structjoueur.h"
+#include "affichage.h"
+
 
 
 
