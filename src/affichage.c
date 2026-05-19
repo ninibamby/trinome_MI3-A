@@ -36,15 +36,15 @@ void affiche_main(joueur j) {
 
     int max = 6;
     
-     printf("\033[92m");
+     printf("\033[36m");
 printf("┌──────────────────────────────┐\n");
 printf("│                              │\n");
 
 printf("\033[0m");
 
-printf("│  Main de %-20.20s │\n", j.pseudo);
+printf("│  Main de %-20.20s│\n", j.pseudo);
 
-printf("\033[92m");
+printf("\033[36m");
 printf("│                              │\n");
 printf("└──────────────────────────────┘\n");
 printf("\033[0m");
@@ -164,11 +164,13 @@ comp1=strcmp("1",tab[i].nom);
   }
 }
 
-printf("\033[36m");
-printf("┌─────────────────────────────────────────┐\n");
-printf("│  Cartes restantes dans la pioche:       │\n");
-printf("├─────────────────────────────────────────┤\n");
-printf("\033[0m");
+      
+printf(ROUGE_CLAIR"┌─────────────────────────────────────────┐\n"RESET);
+printf(ROUGE_CLAIR"│",RESET);
+printf( "   Cartes restantes dans la pioche:        ");
+printf(ROUGE_CLAIR"│\n",RESET);
+printf(ROUGE_ClAIR"├─────────────────────────────────────────┤\n" RESET);
+
 
 printf("  il reste %-2d %c\n", count0, '0');
 printf("  il reste %-2d %c\n", count1, '1');
@@ -218,7 +220,7 @@ for (int i = 0; i < n; i++) {
 if(countX2>0){
 printf("  il reste %-2d X2\n", countX2);
 }
-printf("\033[36m");
-printf("└─────────────────────────────────────────┘\n");
-printf("\033[0m");
+
+printf(ROUGE_CLAIR"└─────────────────────────────────────────┘\n"RESET);
+
 }
