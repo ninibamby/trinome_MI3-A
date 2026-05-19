@@ -165,7 +165,7 @@ comp1=strcmp("1",tab[i].nom);
 
 printf("\033[92m");
 printf("┌──────────────────────────────┐\n");
-printf("│     Cartes restantes         │\n");
+printf("│     Cartes restantes :       │\n");
 printf("├──────────────────────────────┤\n");
 printf("\033[0m");
 
