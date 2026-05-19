@@ -61,7 +61,7 @@ printf("\n\n");
           tab_j[i].main[nb_carte]=tab_p[(*nbc)-1];
           (*nbc)--;
 
-          printf(VIOLET_BRILLIANT"vous avez pioché un %s \n\n",RESET tab_j[i].main[nb_carte].nom);
+          printf(VIOLET_BRILLIANT"vous avez pioché un %s \n\n"RESET, tab_j[i].main[nb_carte].nom);
 
           int est_doublon=0;
           est_doublon=doublon(tab_j[i].main,nb_carte+1);
