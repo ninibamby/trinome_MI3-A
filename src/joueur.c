@@ -31,6 +31,7 @@ void class_joueurs( joueur* tab, int taille ){        //tri a bulle pour classer
 int desordre; 
 int etape = taille-1; 
 int temp;
+char tempc[50];
 
 do{
   desordre = 0;
@@ -40,6 +41,10 @@ do{
       temp = tab[i].score_total;
       tab[i].score_total = tab[i+1].score_total;
       tab[i+1].score_total = temp;
+      strcpy(tempc,tab[i].pseudo);
+      strcpy(tab[i].pseudo,tab[i+1].pseudo);
+      strcpy(tab[i+1].pseudo,tempc);
+      
       etape --;
     }
   }
