@@ -24,6 +24,10 @@ int  manche(joueur* tab_j, int nbj, carte* tab_p, int* nbc){     //return 0 = pa
       tab_j[i].nb_carte=0;
     }
 
+printf("\n\n");
+printf("---------- debut de la manche -------------");
+printf("\n\n");
+
   do{        //debut de la boucle de la manche 
 
   for (int i=0; i<nbj ;i++){           //passe de joueur a joueur 
