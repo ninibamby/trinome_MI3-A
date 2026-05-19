@@ -30,7 +30,7 @@ La partie se termine lorsqu’un joueur atteint 200 points ou lorsque la pioche 
 ### Cloner le projet depuis GitHub
 
 ```bash
-git clone LIEN_DU_GITHUB
+git clone https://github.com/ninibamby/trinome_MI3-A
 ```
 
 ### Entrer dans le dossier du projet
@@ -109,5 +109,5 @@ FlipTech
 # Membres du projet
 
 - **PAYET Nino**
-- GIL-THELIER Valentin
-- Nom Prénom
+- **GIL-THELIER Valentin**
+- **BERTOULI Siffedine**
