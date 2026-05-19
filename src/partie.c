@@ -25,7 +25,7 @@ int  manche(joueur* tab_j, int nbj, carte* tab_p, int* nbc){     //return 0 = pa
     }
 
 printf("\n\n");
-printf("---------- debut de la manche -------------");
+printf(ROUGE_CLAIR_GRAS"---------- debut de la manche -------------"RESET);
 printf("\n\n");
 
   do{        //debut de la boucle de la manche 
