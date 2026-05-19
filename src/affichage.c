@@ -215,7 +215,7 @@ for (int i = 0; i < n; i++) {
         countX2++;
     }
 }
-if(count2>0){
+if(countX2>0){
 printf("  il reste %-2d X2\n", countX2);
 }
 printf("\033[36m");
