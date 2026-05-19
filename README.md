@@ -20,3 +20,8 @@ ensuite
 FlipTech
 
 ./FlipTech
+```
+
+```c
+printf("salut");
+```
