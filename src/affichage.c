@@ -201,8 +201,9 @@ for (int k = 2; k <= 10; k += 2) {
             strcpy(nom_c, tab[i].nom);
         }
     }
-
+if(count2>0){
     printf("  il reste %-2d %s\n", count2, nom_c);
+}
 }
 
 int countX2 = 0;
@@ -213,9 +214,9 @@ for (int i = 0; i < n; i++) {
         countX2++;
     }
 }
-
+if(count2>0){
 printf("  il reste %-2d X2\n", countX2);
-
+}
 printf("\033[36m");
 printf("└─────────────────────────────────────────┘\n");
 printf("\033[0m");
