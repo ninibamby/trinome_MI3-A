@@ -35,9 +35,18 @@ return 37;
 void affiche_main(joueur j) {
 
     int max = 6;
+    
+     printf("\033[91m");
 
-    printf("\nMain de %s :\n\n", j.pseudo);
+printf("\033[91m");
 
+printf("┌─────────────────────────────────────────┐\n");
+printf("│                                         │\n");
+printf("│  Main de %-20s │\n", j.pseudo);
+printf("│                                         │\n");
+printf("└─────────────────────────────────────────┘\n");
+
+printf("\033[0m");
     for (int debut = 0; debut < j.nb_carte; debut += max) {
 
         int fin = debut + max;
@@ -134,7 +143,7 @@ void affiche_main(joueur j) {
 
 void compte_carte(carte* tab, int n){
     if ( tab == NULL  || n <= 0 ){
-        printf("erreur, n'arrive pas à lire la pioche ");
+        printf(" ❌erreur, n'arrive pas à lire la pioche❌ \n");
         return;
     }
 int count0=0;
@@ -154,43 +163,59 @@ comp1=strcmp("1",tab[i].nom);
   }
 }
 
-printf (" il reste %d %c \n",count0,'0');
-printf (" il reste %d %c \n",count1,'1');
+printf("\033[92m");
+printf("┌──────────────────────────────┐\n");
+printf("│     Cartes restantes         │\n");
+printf("├──────────────────────────────┤\n");
+printf("\033[0m");
 
-for ( int k = 2 ; k <= 12 ; k++ ){              //compte les carte de 2 a 12 
-     int count=0;
-    for ( int i = 0 ; i < n ;i++ ){          
-        
-        if (tab[i].type == 0 && tab[i].val == k){
-        count++;       
-        strcpy(nom_c,tab[i].nom);
+printf("  il reste %-2d %c\n", count0, '0');
+printf("  il reste %-2d %c\n", count1, '1');
+
+for (int k = 2; k <= 12; k++) {
+
+    int count = 0;
+    char nom_c[20] = "";
+
+    for (int i = 0; i < n; i++) {
+
+        if (tab[i].type == 0 && tab[i].val == k) {
+            count++;
+            strcpy(nom_c, tab[i].nom);
         }
     }
-printf (" il reste %d %s \n",count,nom_c);
-} 
 
-for (int k=2 ; k<=10 ; k+=2 ){
-    int count2=0;
-for (int i=0 ; i<n ;i++){        //compte les bonus de type +
-    
-  
-      char nom_c[3];
-      if (tab[i].type==1 && tab[i].val==k){
-        count2++;
-       strcpy(nom_c,tab[i].nom);
-        
-      }
-
-  }
-printf (" il reste %d %s \n",count2,nom_c);
-} 
-
-int countX2=0;
-
-for (int i=0 ; i<n ;i++){        //compte les X2
-  if (tab[i].type==2 ){
-  countX2++;
-  }
+    printf("  il reste %-2d %s\n", count, nom_c);
 }
-printf (" il reste %d %s \n",countX2,"X2");
+
+for (int k = 2; k <= 10; k += 2) {
+
+    int count2 = 0;
+    char nom_c[20] = "";
+
+    for (int i = 0; i < n; i++) {
+
+        if (tab[i].type == 1 && tab[i].val == k) {
+            count2++;
+            strcpy(nom_c, tab[i].nom);
+        }
+    }
+
+    printf("  il reste %-2d %s\n", count2, nom_c);
+}
+
+int countX2 = 0;
+
+for (int i = 0; i < n; i++) {
+
+    if (tab[i].type == 2) {
+        countX2++;
+    }
+}
+
+printf("  il reste %-2d X2\n", countX2);
+
+printf("\033[92m");
+printf("└──────────────────────────────┘\n");
+printf("\033[0m");
 }
