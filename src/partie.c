@@ -9,7 +9,7 @@
 
 
 int  manche(joueur* tab_j, int nbj, carte* tab_p, int* nbc){     //return 0 = pas fini 1=plus de carte 2= flip 7
-  if ( tab_p == NULL || nbj <= 0 || tab_j == NULL ){
+  if ( tab_p == NULL  || tab_j == NULL ){
           printf("💥Aïe... impossible de lire la main du joueur \n");
           return -1;
       }
