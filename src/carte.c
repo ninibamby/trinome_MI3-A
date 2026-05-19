@@ -179,4 +179,4 @@ void melange_pioche(carte* tab,int taille){
     tab[i]=tab[r];
     tab[r]=temp;
   }
-}
+} 
