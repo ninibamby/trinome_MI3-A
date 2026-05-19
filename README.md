@@ -6,7 +6,7 @@ Le jeu est une adaptation du jeu **Flip 7**.
 
 ---
 
-# Compilation du projet
+## Compilation du projet
 
 Le projet se compile avec `gcc` sous Linux grâce au Makefile fourni.
 
@@ -25,3 +25,7 @@ FlipTech
 ```c
 printf("salut");
 ```
+
+
+- élément
+- élément
