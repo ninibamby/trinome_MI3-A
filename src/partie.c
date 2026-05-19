@@ -31,7 +31,7 @@ int  manche(joueur* tab_j, int nbj, carte* tab_p, int* nbc){     //return 0 = pa
         printf ("\033[1m-------tour du joueur : %d-------\033[0m\n",tab_j[i].numj);
         printf ("voulez vous piocher une carte ? \n");
         printf("\n");
-        compte_carte(tab_p,nbc);
+        compte_carte(tab_p,(*nbc));
         affiche_main( tab_j[i] );
       
         do{                            //verifie la reponse 
@@ -54,7 +54,7 @@ int  manche(joueur* tab_j, int nbj, carte* tab_p, int* nbc){     //return 0 = pa
           int nb_carte=tab_j[i].nb_carte;
           tab_j[i].nb_carte++;
           tab_j[i].main[nb_carte]=tab_p[(*nbc)-1];
-          *nbc--;
+          (*nbc)--;
 
           printf("vous avez piocher un %s \n",tab_j[i].main[nb_carte].nom);
 
@@ -74,7 +74,7 @@ int  manche(joueur* tab_j, int nbj, carte* tab_p, int* nbc){     //return 0 = pa
             printf (" %s a sept carte la manche est terminée !! \n",tab_j[i].pseudo);
             break;
           }   // fin recherche_flip7
-          if (nbc==0){
+          if ((*nbc)==0){
             printf ("la pioche est vide la manche est terminée !! \n");
             return 2;
           }
@@ -95,7 +95,7 @@ int  manche(joueur* tab_j, int nbj, carte* tab_p, int* nbc){     //return 0 = pa
       }
     }
 
-    if(joueurs_actifs == 0 || nbc==0 || recherche_flip7==1){      //cherche si il y a une des condition pour finir la partie          
+    if(joueurs_actifs == 0 || (*nbc)==0 || recherche_flip7==1){      //cherche si il y a une des condition pour finir la partie          
       manche_fini = 1;
     }
   }while(manche_fini==0);
@@ -128,7 +128,7 @@ void partie (joueur* tab_j,int nbj, carte* tab_p , int* nbc){   //debut fct part
   char nom[50];
   char nom_fichier[55];
   int k=0;
-
+ int NBC=*nbc;
 
   if ( tab_p == NULL || nbj <= 0 || tab_j == NULL ){
     printf("💥Aïe... impossible de lire les données \n");
@@ -136,11 +136,11 @@ void partie (joueur* tab_j,int nbj, carte* tab_p , int* nbc){   //debut fct part
   }
   int nb_tour;
 
-  melange_pioche(tab_p,nbc);
+  melange_pioche(tab_p,(*nbc));
   int res_manche=0;
   do{
     res_manche=0;
-    res_manche=manche(tab_j,nbj,tab_p,nbc);
+    res_manche=manche(tab_j,nbj,tab_p,&NBC);
 
     affiche_resultat(tab_j,nbj,res_manche);
 

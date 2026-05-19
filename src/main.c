@@ -44,7 +44,7 @@ for(int i = 0; i < nbj; i++){
 
 creation_pioche(pioche,&taille_pioche);
 
-partie(tab_joueur,nbj,pioche,taille_pioche);
+partie(tab_joueur,nbj,pioche,&taille_pioche);
 
 
     
