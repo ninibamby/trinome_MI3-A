@@ -25,7 +25,7 @@ int  manche(joueur* tab_j, int nbj, carte* tab_p, int* nbc){     //return 0 = pa
     }
 
 printf("\n\n");
-printf("---------- debut de la manche -------------");
+printf(ROUGE_CLAIR_GRAS"---------- debut de la manche -------------"RESET);
 printf("\n\n");
 
   do{        //debut de la boucle de la manche 
@@ -61,7 +61,7 @@ printf("\n\n");
           tab_j[i].main[nb_carte]=tab_p[(*nbc)-1];
           (*nbc)--;
 
-          printf(VIOLET_BRILLIANT"vous avez pioché un %s \n\n",RESET tab_j[i].main[nb_carte].nom);
+          printf(VIOLET_BRILLIANT"vous avez pioché un %s \n\n"RESET, tab_j[i].main[nb_carte].nom);
 
           int est_doublon=0;
           est_doublon=doublon(tab_j[i].main,nb_carte+1);
@@ -160,7 +160,7 @@ void partie (joueur* tab_j,int nbj, carte* tab_p , int* nbc){   //debut fct part
 
   //sauvegarde dans le fichier
 
-  printf (" Voulez vous sauvegarder les score ? \n 1:oui \n 2:non");      //demande si on sauvegarde
+  printf (" Voulez vous sauvegarder les score ? \n 1:oui \n 2:non \n");      //demande si on sauvegarde
   do{
     scanf("%d",&rep);
     viderBuffer();
@@ -190,7 +190,7 @@ if (rep==1){                //si on sauvegarde
   fclose(f);
 }
 printf("\n");
-printf(" ----------- FIN DE LA PARTIE --------");
+printf(" ----------- FIN DE LA PARTIE -------- \n");
 
 }
 
