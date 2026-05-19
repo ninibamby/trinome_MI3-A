@@ -167,7 +167,7 @@ void partie (joueur* tab_j,int nbj, carte* tab_p , int* nbc){   //debut fct part
   } while (rep!=1 && rep!=2);
 
 if (rep==1){                //si on sauvegarde
-  printf("comment appelez vous votre fichier \n");
+  printf(CYAN"comment appelez vous votre fichier ?! \n"RESET);
   scanf("%s",nom);
 
   do{
