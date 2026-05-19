@@ -17,8 +17,7 @@
 #define BLEU           "\033[34m"
 #define GRIS_FONCE     "\033[90m"
 
-// Reset couleur
-#define COLOR_RESET          "\033[0m"
+#define RESET          "\033[0m"
 
 int Couleur(carte c);
 
