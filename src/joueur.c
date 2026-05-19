@@ -80,7 +80,7 @@ int k = 1;
     }
  printf("---------------------------------\n");
     }
-  }
+  
   else if ( n == 2 ){
   int y=taille-1;
   class_joueurs( tab, taille );
@@ -101,5 +101,6 @@ int k = 1;
     }
  printf("---------------------------------\n");
   }
+}
 
 

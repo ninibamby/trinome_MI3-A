@@ -141,6 +141,7 @@ int count0=0;
 int count1=0;
 int comp0;
 int comp1;
+char nom_c[3];
 
 for (int i=0 ; i<n ;i++){        //compte les 0 et 1
 comp0=strcmp("0",tab[i].nom);
@@ -159,7 +160,7 @@ printf (" il reste %d %c \n",count1,'1');
 for ( int k = 2 ; k <= 12 ; k++ ){              //compte les carte de 2 a 12 
      int count=0;
     for ( int i = 0 ; i < n ;i++ ){          
-        char nom_c[3];
+        
         if (tab[i].type == 0 && tab[i].val == k){
         count++;       
         strcpy(nom_c,tab[i].nom);

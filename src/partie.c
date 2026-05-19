@@ -53,13 +53,13 @@ int  manche(joueur* tab_j, int nbj, carte* tab_p, int* nbc){     //return 0 = pa
         else if(rep==1){            //debut si le joueur continue
           int nb_carte=tab_j[i].nb_carte;
           tab_j[i].nb_carte++;
-          tab_j[i].main[nb_carte]=tab_p[nbc-1];
+          tab_j[i].main[nb_carte]=tab_p[(*nbc)-1];
           *nbc--;
 
           printf("vous avez piocher un %s \n",tab_j[i].main[nb_carte].nom);
 
           int est_doublon=0;
-          est_doublon=doublon(tab-j[i].main,nb_carte+1);
+          est_doublon=doublon(tab_j[i].main,nb_carte+1);
       
           if(est_doublon==1){        //verif si il pioche un double
             tab_j[i].actif=0;
