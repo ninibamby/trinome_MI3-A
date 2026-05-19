@@ -36,16 +36,17 @@ void affiche_main(joueur j) {
 
     int max = 6;
     
-     printf("\033[91m");
+     printf("\033[92m");
+printf("┌──────────────────────────────┐\n");
+printf("│                              │\n");
 
-printf("\033[91m");
+printf("\033[0m");
 
-printf("┌─────────────────────────────────────────┐\n");
-printf("│                                         │\n");
-printf("│  Main de %-20s │\n", j.pseudo);
-printf("│                                         │\n");
-printf("└─────────────────────────────────────────┘\n");
+printf("│  Main de %-20.20s │\n", j.pseudo);
 
+printf("\033[92m");
+printf("│                              │\n");
+printf("└──────────────────────────────┘\n");
 printf("\033[0m");
     for (int debut = 0; debut < j.nb_carte; debut += max) {
 
