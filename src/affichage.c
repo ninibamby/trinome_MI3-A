@@ -166,10 +166,10 @@ comp1=strcmp("1",tab[i].nom);
 
       
 printf(ROUGE_CLAIR"┌─────────────────────────────────────────┐\n"RESET);
-printf(ROUGE_CLAIR"│",RESET);
+printf(ROUGE_CLAIR"│"RESET);
 printf( "   Cartes restantes dans la pioche:        ");
-printf(ROUGE_CLAIR"│\n",RESET);
-printf(ROUGE_ClAIR"├─────────────────────────────────────────┤\n" RESET);
+printf(ROUGE_CLAIR"│\n"RESET);
+printf(ROUGE_CLAIR"├─────────────────────────────────────────┤\n" RESET);
 
 
 printf("  il reste %-2d %c\n", count0, '0');
