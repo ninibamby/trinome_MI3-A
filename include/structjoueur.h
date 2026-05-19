@@ -1,7 +1,7 @@
 #ifndef STRUCTJOUEUR_H
 #define STRUCTJOUEUR_H
 
-#include "strcutcarte.h"
+#include "structcarte.h"
 
 typedef struct{
     int numj;
