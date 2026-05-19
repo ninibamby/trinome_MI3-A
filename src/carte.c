@@ -140,7 +140,11 @@ index++;
     }
   }
 
-strcpy(tab[index].nom, "+4");        //cree tout les bonus (type 1)
+strcpy(tab[index].nom, "+2");               //cree tout les bonus (type 1)
+tab[index].val=2;
+tab[index].type=1;
+index++;
+strcpy(tab[index].nom, "+4");        
 tab[index].val=4;
 tab[index].type=1;
 index++;

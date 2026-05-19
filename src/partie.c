@@ -163,7 +163,7 @@ void partie (joueur* tab_j,int nbj, carte* tab_p , int* nbc){   //debut fct part
     scanf("%d",&rep);
     viderBuffer();
   } while (rep!=1 && rep!=2);
-
+if (rep==1){
   printf("comment appelez vous votre fichier \n");
   scanf("%s",nom);
 
@@ -185,6 +185,10 @@ void partie (joueur* tab_j,int nbj, carte* tab_p , int* nbc){   //debut fct part
     fprintf(f, "%s : %d points\n", tab_j[i].pseudo, tab_j[i].score_total);
   }
   fclose(f);
+}
+printf("\n");
+printf(" ----------- FIN DE LA PARTIE --------");
+
 }
 
 

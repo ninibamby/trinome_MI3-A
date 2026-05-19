@@ -3,7 +3,9 @@
 #include <time.h>
 #include <string.h>
 
-#include"structjoueur.h"
+#include "structjoueur.h"
+#include "affichage.h"
+
 
 int Couleur(carte c) {
 
