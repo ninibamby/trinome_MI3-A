@@ -1,7 +1,7 @@
 #ifndef AFFICHAGE_H
 #define AFFICHAGE_H
 
-#include"structcarte.h"
+#include"structjoueur.h"
 
 int Couleur(carte c);
 
