@@ -33,10 +33,11 @@ printf("\n\n");
   for (int i=0; i<nbj ;i++){           //passe de joueur a joueur 
       if(tab_j[i].actif==1){
         printf ("\033[1m-------tour du joueur : %d-------\033[0m\n",tab_j[i].numj);
-        printf ("voulez vous piocher une carte ? \n");
-        printf("\n");
         compte_carte(tab_p,(*nbc));
         affiche_main( tab_j[i] );
+        printf ("voulez vous piocher une carte ? \n");
+        printf("\n");
+
       
         do{                            //verifie la reponse 
           res=scanf(" %d",&rep);
