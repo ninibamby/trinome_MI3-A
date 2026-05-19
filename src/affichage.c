@@ -155,11 +155,16 @@ int comp0;
 int comp1;
 char nom_c[3];
 
+
+
 printf(ROUGE_CLAIR"┌─────────────────────────────────────────┐\n"RESET);
 printf(ROUGE_CLAIR"│"RESET);
 printf( "   Cartes restantes dans la pioche:        ");
 printf(ROUGE_CLAIR"│\n"RESET);
 printf(ROUGE_CLAIR"├─────────────────────────────────────────┤\n" RESET);
+
+
+
 
 for (int i=0 ; i<n ;i++){        //compte les 0 et 1
 comp0=strcmp("0",tab[i].nom);
@@ -171,16 +176,6 @@ comp1=strcmp("1",tab[i].nom);
   count1++;
   }
 }
-
-
-        
-
-      
-printf(ROUGE_CLAIR"┌─────────────────────────────────────────┐\n"RESET);
-printf(ROUGE_CLAIR"│"RESET);
-printf( "   Cartes restantes dans la pioche:      ");
-printf(ROUGE_CLAIR"│\n"RESET);
-printf(ROUGE_CLAIR"├─────────────────────────────────────────┤\n" RESET);
 
 
 
