@@ -9,19 +9,19 @@ int Couleur(carte c) {
 
     if (c.type == 0) {
         switch(c.val) {
-            case 0:  return 96;  \\ cyan clair
-            case 1:  return 37;  \\ gris
-            case 2:  return 33;  \\ jaune
-            case 3:  return 91;  \\ rouge clair
-            case 4:  return 36;  \\ cyan 
-            case 5:  return 32;  \\ vert
-            case 6:  return 35;  \\ violet
-            case 7:  return 95;  \\ violet brillant
-            case 8:  return 92;  \\ vert clair
-            case 9:  return 93;  \\ jaune clair
-            case 10: return 31;  \\  rouge    
-            case 11: return 34;  \\ bleu
-            case 12: return 90;  \\ gris 
+            case 0:  return 96; // cyan clair
+            case 1:  return 37;  // gris
+            case 2:  return 33;  // jaune
+            case 3:  return 91;  // rouge clair
+            case 4:  return 36;  // cyan 
+            case 5:  return 32;  // vert
+            case 6:  return 35;  // violet
+            case 7:  return 95;  // violet brillant
+            case 8:  return 92;  // vert clair
+            case 9:  return 93;  // jaune clair
+            case 10: return 31;  //  rouge    
+            case 11: return 34;  // bleu
+            case 12: return 90;  // gris 
         }
     }
 
