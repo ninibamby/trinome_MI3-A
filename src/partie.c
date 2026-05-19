@@ -32,7 +32,7 @@ printf("\n\n");
 
   for (int i=0; i<nbj ;i++){           //passe de joueur a joueur 
       if(tab_j[i].actif==1){
-        printf ("\033[1m-------tour du joueur : %d-------\033[0m\n",tab_j[i].numj);
+        printf (JAUNE_CLAIR"\033[1m-------tour du joueur : %d-------\033[0m\n\n"RESET,tab_j[i].numj);
         compte_carte(tab_p,(*nbc));
         affiche_main( tab_j[i] );
         printf ("voulez vous piocher une carte ? \n");
@@ -61,7 +61,7 @@ printf("\n\n");
           tab_j[i].main[nb_carte]=tab_p[(*nbc)-1];
           (*nbc)--;
 
-          printf("vous avez piocher un %s \n",tab_j[i].main[nb_carte].nom);
+          printf(VIOLET_BRILLIANT"vous avez pioché un %s \n\n",RESET tab_j[i].main[nb_carte].nom);
 
           int est_doublon=0;
           est_doublon=doublon(tab_j[i].main,nb_carte+1);
