@@ -159,7 +159,7 @@ char nom_c[3];
 
 printf(ROUGE_CLAIR"┌─────────────────────────────────────────┐\n"RESET);
 printf(ROUGE_CLAIR"│"RESET);
-printf( "   Cartes restantes dans la pioche:        ");
+printf( "   Cartes restantes dans la pioche:      ");
 printf(ROUGE_CLAIR"│\n"RESET);
 printf(ROUGE_CLAIR"├─────────────────────────────────────────┤\n" RESET);
 
