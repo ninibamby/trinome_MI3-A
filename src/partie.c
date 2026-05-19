@@ -81,7 +81,7 @@ printf("\n\n");
           }   // fin recherche_flip7
           if ((*nbc)==0){
             printf ("la pioche est vide la manche est terminée !! \n");
-            return 2;
+            break;
           }
 
 
@@ -119,6 +119,9 @@ printf("\n\n");
     printf (" le score de %s est de %d sur cette manche \n score total de ce joueur : %d\n",tab_j[i].pseudo,tab_j[i].score,tab_j[i].score_total);
 
   }
+  if ((*nbc)==0){
+            return 2;
+          }
   for (int i=0 ; i<nbj ;i++){
     if (tab_j[i].score_total>=200){
       return 1;
