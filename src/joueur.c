@@ -20,7 +20,7 @@ joueur CreationJoueur(int x){ //creer le profil de chaque joueur de la partie
 int espace = 0;
 
 int c;
-while ((c = getchar()) != '\n' && c != EOF);
+while ((c = getchar()) != '\n' && c != EOF){}
     
  printf("Joueur %d, entrez votre pseudo (max 15 caractères, sans espace):\n", x);
 
