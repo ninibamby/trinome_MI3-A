@@ -28,6 +28,8 @@ verif = scanf ("%d", &nbj);
 }
     int c;
 while ((c = getchar()) != '\n' && c != EOF);
+
+    
 }while(nbj<2);//demande du nombre de joueur
 
 joueur* tab_joueur = malloc(nbj * sizeof(joueur));
