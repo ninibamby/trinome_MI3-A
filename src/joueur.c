@@ -26,9 +26,12 @@ joueur CreationJoueur(int x){ //creer le profil de chaque joueur de la partie
       scanf ( "%s", a.pseudo);
     if(strlen(a.pseudo) > 15){
         printf (" ⛔️ pseudo trop long ⛔️ \n");
-    }for(int j = strlen(a.pseudo); j >= 0; j--){
+    }
+      for(int j = strlen(a.pseudo); j >= 0; j--){
         if ( a.pseudo[j] == ' '){
             printf (" ⛔️ pseudo non valide ⛔️ Enlevez les espaces \n");
+        }
+      }
     }while(a.pseudo[15]!='\0');
   a.nb_carte=0;
   a.score=0;
@@ -81,7 +84,6 @@ void affiche_resultat( joueur* tab, int taille, int n){
   }
 
 int j = 4;
-int k = 1;
  
     
 printf("\n");
