@@ -76,9 +76,9 @@ printf("\n\n");
             tab_j[i].nb_carte=0;
           }else if(est_doublon == 0){
             if( tab_j[i].main[nb_carte].type == 0 || tab_j[i].main[nb_carte].type == 1 ){
-            printf(VERT"votre score augmente de %s, bien joué ! Attention à ne pas être trop gourmand...\n\n"RESET, tab_j[i].main[nb_carte].nom);
+            printf(VERT"votre score augmente de %s, bien joué ! Attention à ne pas être trop gourmand...\n\n"RESET, tab_p[i].main[(*nbc)].nom);
             } else if ( tab_j[i].main[nb_carte].type == 2 ){
-              printf(VERT" votre score se multiplie par %s, bien joué ! Attention à ne pas être trop gourmand...\n\n"RESET, tab_j[i].main[nb_carte].nom);
+              printf(VERT" votre score se multiplie par %s, bien joué ! Attention à ne pas être trop gourmand...\n\n"RESET, tab_p[i].main[(*nbc)].nom);
             }
           }
           recherche_flip7=flip_7(tab_j[i].main,nb_carte+1);
