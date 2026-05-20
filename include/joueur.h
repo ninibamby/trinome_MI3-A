@@ -7,7 +7,7 @@ joueur CreationJoueur(int x);
 
 void class_joueurs( joueur* tab, int taille );
 
-void affiche_resulat( joueur* tab, int taille, int n);
+void affiche_resultat( joueur* tab, int taille, int n);
 
 void viderBuffer();
 
