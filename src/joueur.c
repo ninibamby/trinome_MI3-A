@@ -92,7 +92,7 @@ int k = 1;
     printf("| #  |  JOUEUR    | SCORE     |\n");
     printf("|-----------------------------|\n");
     printf("| 🥇 |");
-    printf(JAUNE_CLAIR" %-10s"RESET, tab[i].pseudo,);
+    printf(JAUNE_CLAIR" %-10s"RESET, tab[i].pseudo);
     printf("| %8d        |\n", tab[i].score_total);
     i--;
     printf("| 🥈 | %-10s         | %8d        |\n", tab[i].pseudo, tab[i].score_total);
