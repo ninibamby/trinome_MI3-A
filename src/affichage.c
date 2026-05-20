@@ -22,7 +22,7 @@ int Couleur(carte c) {
             case 8:  return 92;  // vert clair
             case 9:  return 93;  // jaune clair
             case 10: return 31;  //  rouge    
-            case 11: return 34;  // bleu
+            case 11: return 94;  // bleu clair
             case 12: return 90;  // gris 
         }
     }
