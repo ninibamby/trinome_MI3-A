@@ -20,7 +20,7 @@ joueur CreationJoueur(int x){ //creer le profil de chaque joueur de la partie
   do {
       scanf ( "%s", a.pseudo);
     if(a.pseudo[15]!="\0"){
-        printf (" pseudo trop long \n");
+        printf (" ⛔️ pseudo trop long ⛔️ \n");
         viderBuffer();
       while(a.pseudo[15]!="\0");
   a.nb_carte=0;
