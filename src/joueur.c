@@ -17,6 +17,7 @@ joueur CreationJoueur(int x){ //creer le profil de chaque joueur de la partie
   for(int i = 0; i < 20; i++) {
     a.pseudo[i] = '\0';
 }
+int espace = 0;
 
  printf("Joueur %d, entrez votre pseudo (max 15 caractères, sans espace):\n", x);
 
@@ -30,7 +31,7 @@ do{
     }
 
     // verif espace
-    int espace = 0;
+    espace = 0;
 
     for(int i = 0; a.pseudo[i] != '\0'; i++){
         if(a.pseudo[i] == ' '){
