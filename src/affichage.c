@@ -44,7 +44,9 @@ printf("│                              │\n");
 
 printf("\033[0m");
 
-printf("│  Main de %-20.20s│\n", j.pseudo);
+printf(CYAN"│"RESET);
+printf("Main de %-20.20s\n", j.pseudo);
+printf(CYAN"│"RESET);
 
 printf("\033[36m");
 printf("│                              │\n");
