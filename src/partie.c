@@ -206,10 +206,3 @@ printf(" ----------- FIN DE LA PARTIE -------- \n");
 
 }
 
-
-void viderBuffer() {         // supprime la saisie de l'utilisateur si celle-ci est mauvaise
-  char c;
-  do {
-    c = getchar();
-  } while (c != '\n');
-}
