@@ -26,6 +26,8 @@ verif = scanf ("%d", &nbj);
     } else if (nbj<2){
   printf("Pas assez de joueurs\n");   // message d'erreur si nb joueurs < 2
 }
+    int c;
+while ((c = getchar()) != '\n' && c != EOF);
 }while(nbj<2);//demande du nombre de joueur
 
 joueur tab_joueur[nbj];
