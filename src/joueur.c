@@ -127,7 +127,7 @@ if ( n == 1 ){    //victoire par 200 points
   else if ( n == 2 ){         //plus de carte
     class_joueurs( tab, taille );
     if(taille=2){     //pour 2 joueurs
-      int y=taille-1;
+      int i=taille-1;
       
     printf(" Personne n'a réussit à obtenir 200 points durant cette partie mais nous avons quand même un gagnant ! \n" );
     printf(JAUNE_CLAIR" 🏆 CLASSEMENT DES JOUEURS 🏆 \n"RESET);
@@ -142,7 +142,7 @@ if ( n == 1 ){    //victoire par 200 points
       printf("----------------------------------------------\n");
     }
   else{       //pour plus de 2 joueurs
-  int y=taille-1;
+  int i=taille-1;
   class_joueurs( tab, taille );
   printf(" Personne n'a réussit à obtenir 200 points durant cette partie mais nous avons quand même un gagnant ! \n" );
  printf(JAUNE_CLAIR" 🏆 CLASSEMENT DES JOUEURS 🏆 \n"RESET);
