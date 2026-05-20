@@ -16,6 +16,7 @@ joueur CreationJoueur(int x){
     a.numj = x;
 
     int valide;
+    int len;
 
     printf("Joueur %d, entrez votre pseudo (max 15 caractères, sans espace):\n", x);
 
@@ -24,21 +25,34 @@ joueur CreationJoueur(int x){
 
         fgets(a.pseudo, sizeof(a.pseudo), stdin);
 
-        // enlever le '\n'
-        int len = strlen(a.pseudo);
+        len = strlen(a.pseudo);
+
+        // enlever \n si présent
         if(len > 0 && a.pseudo[len - 1] == '\n'){
             a.pseudo[len - 1] = '\0';
+            len--;
+        }
+        else{
+            // 🔥 cas : entrée trop longue → il reste du texte dans stdin
+            int c;
+            while ((c = getchar()) != '\n' && c != EOF);
         }
 
-        // vérif longueur
-        if(strlen(a.pseudo) == 0 || strlen(a.pseudo) > 15){
-            printf("⛔ pseudo invalide (1 à 15 caractères) ⛔\n");
+        // vide
+        if(len == 0){
+            printf("⛔ pseudo vide ⛔\n");
             valide = 0;
         }
 
-        // vérif espaces
+        // trop long (logique)
+        if(len > 15){
+            printf("⛔ pseudo trop long ⛔\n");
+            valide = 0;
+        }
+
+        // espace
         if(strchr(a.pseudo, ' ') != NULL){
-            printf("⛔ pas d'espaces dans le pseudo ⛔\n");
+            printf("⛔ pas d'espaces ⛔\n");
             valide = 0;
         }
 
@@ -51,7 +65,6 @@ joueur CreationJoueur(int x){
 
     return a;
 }
-
 
 void class_joueurs(joueur* tab, int taille){
 
