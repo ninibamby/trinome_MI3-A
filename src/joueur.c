@@ -18,29 +18,32 @@ joueur CreationJoueur(int x){ //creer le profil de chaque joueur de la partie
     a.pseudo[i] = '\0';
 }
 
- 
-    printf("Joueur %d, entrez votre pseudo (max 15 caractères, sans espace):\n", x);
+ printf("Joueur %d, entrez votre pseudo (max 15 caractères, sans espace):\n", x);
+
 do{
     fgets(a.pseudo, sizeof(a.pseudo), stdin);
-    int len = strlen(a.pseudo);
-    
-    if(len > 0 && a.pseudo[len - 1] == '\n'){
-    a.pseudo[len - 1] = '\0';
-}
 
-    if(strlen(a.pseudo) > 15){
-        printf("⛔️ pseudo trop long ⛔️\n");
+    // enlever \n
+    int len = strlen(a.pseudo);
+    if(len > 0 && a.pseudo[len - 1] == '\n'){
+        a.pseudo[len - 1] = '\0';
     }
 
+    // verif espace
     int espace = 0;
+
     for(int i = 0; a.pseudo[i] != '\0'; i++){
         if(a.pseudo[i] == ' '){
             espace = 1;
         }
     }
+                // verif taille 
+    if(strlen(a.pseudo) > 15){
+        printf("⛔️ pseudo trop long ⛔️\n");
+    }
 
     if(espace == 1){
-        printf("⛔️ pseudo invalide : pas d'espaces ⛔️\n");
+        printf("⛔️ pseudo invalide : enlevez les espaces ⛔️\n");
     }
 
 }while(strlen(a.pseudo) > 15 || espace == 1);
