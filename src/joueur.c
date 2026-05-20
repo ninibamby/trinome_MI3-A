@@ -20,7 +20,7 @@ joueur CreationJoueur(int x){ //creer le profil de chaque joueur de la partie
 int espace = 0;
 
 int c;
-while ((c = getchar()) != '\n' && c != EOF){}
+while ((c = getchar()) != '\n' && c != EOF);
     
  printf("Joueur %d, entrez votre pseudo (max 15 caractères, sans espace):\n", x);
 
@@ -60,30 +60,30 @@ return a;
 } 
 
 
-void class_joueurs( joueur* tab, int taille ){        //tri a bulle pour classer les joueurs
+void class_joueurs(joueur* tab, int taille){
 
-int desordre; 
-int etape = taille-1; 
-int temp;
-char tempc[50];
+    int desordre;
+    int etape = taille - 1;
+    joueur temp;
 
-do{
-  desordre = 0;
-  for ( int i = 0; i < etape; i++ ){
-    if( tab[i].score_total > tab[i+1].score_total ){
-      desordre = 1;
-      temp = tab[i].score_total;
-      tab[i].score_total = tab[i+1].score_total;
-      tab[i+1].score_total = temp;
-      strcpy(tempc,tab[i].pseudo);
-      strcpy(tab[i].pseudo,tab[i+1].pseudo);
-      strcpy(tab[i+1].pseudo,tempc);
-      
-     
-    }
-     etape --;  
-  }
-}while ( desordre != 0 && etape > 0 );
+    do{
+        desordre = 0;
+
+        for(int i = 0; i < etape; i++){
+
+            if(tab[i].score_total > tab[i+1].score_total){
+
+                desordre = 1;
+
+                temp = tab[i];
+                tab[i] = tab[i+1];
+                tab[i+1] = temp;
+            }
+        }
+
+        etape--;
+
+    }while(desordre && etape > 0);
 }
 
 
