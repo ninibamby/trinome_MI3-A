@@ -65,6 +65,7 @@ printf("\n\n");
           (*nbc)--;
 
           printf(VIOLET_BRILLIANT"vous avez pioché un %s \n\n"RESET, tab_j[i].main[nb_carte].nom);
+          
 
           int est_doublon=0;
           est_doublon=doublon(tab_j[i].main,nb_carte+1);
@@ -73,8 +74,13 @@ printf("\n\n");
             tab_j[i].actif=0;
             printf(" Vous avez pioché un double, votre tour est terminé, vous gagnez 0 points \n");
             tab_j[i].nb_carte=0;
+          }else if(est_doublon == 0){
+            if( tab_j[i].main[nb_carte].type == 0 || tab_j[i].main[nb_carte].type == 1 ){
+            printf(VERT"votre score augmente de %s, bien joué ! Attention à ne pas être trop gourmand...\n\n"RESET, tab_j[i].main[nb_carte].nom);
+            } else if ( tab_j[i].main[nb_carte].type == 2 ){
+              printf(VERT" votre score se multiplie par %s, bien joué ! Attention à ne pas être trop gourmand...\n\n"RESET, tab_j[i].main[nb_carte].nom);
+            }
           }
-      
           recherche_flip7=flip_7(tab_j[i].main,nb_carte+1);
       
           if (recherche_flip7==1){        //recherche si il y a un flip7
