@@ -18,15 +18,17 @@ joueur CreationJoueur(int x){ //creer le profil de chaque joueur de la partie
     a.pseudo[i] = '\0';
 }
 
-  printf (" Joueur %d, veuillez entrer votre pseudo (max 15 caractères ): \n ", x);
+  printf (" Joueur %d, veuillez entrer votre pseudo (max 15 caractères, sans espace ): \n ", x);
   do {
        for(int i = 0; i < 20; i++) {
             a.pseudo[i] = '\0';
             }
       scanf ( "%s", a.pseudo);
-    if(a.pseudo[15]!='\0'){
+    if(strlen(a.pseudo) > 15){
         printf (" ⛔️ pseudo trop long ⛔️ \n");
-    }
+    }for(int j = strlen(a.pseudo); j >= 0; j--){
+        if ( a.pseudo[j] == ' '){
+            printf (" ⛔️ pseudo non valide ⛔️ Enlevez les espaces \n");
     }while(a.pseudo[15]!='\0');
   a.nb_carte=0;
   a.score=0;
@@ -46,7 +48,7 @@ char tempc[50];
 
 do{
   desordre = 0;
-  for ( int i = 0; i <= etape; i++ ){
+  for ( int i = 0; i < etape; i++ ){
     if( tab[i].score_total > tab[i+1].score_total ){
       desordre = 1;
       temp = tab[i].score_total;
@@ -56,8 +58,9 @@ do{
       strcpy(tab[i].pseudo,tab[i+1].pseudo);
       strcpy(tab[i+1].pseudo,tempc);
       
-      etape --;
+     
     }
+     etape --;  
   }
 }while ( desordre != 0 && etape > 0 );
 }
