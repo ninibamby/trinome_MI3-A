@@ -69,6 +69,11 @@ void affiche_resultat( joueur* tab, int taille, int n){
 int j = 1;
 int k = 1;
 
+    
+printf("\n");
+printf("\n");
+
+    
   if ( n == 1 ){    //victoire par 200 points
     class_joueurs( tab, taille );
     if(taille=2){     //pour 2 joueurs
