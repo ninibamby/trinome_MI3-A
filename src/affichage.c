@@ -46,7 +46,7 @@ printf("\033[0m");
 
 printf(CYAN"│"RESET);
 printf("Main de %-20.20s", j.pseudo);
-printf(CYAN"│\n"RESET);
+printf(CYAN"  │\n"RESET);
 
 printf("\033[36m");
 printf("│                              │\n");
