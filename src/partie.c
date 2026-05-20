@@ -85,11 +85,11 @@ printf("\n\n");
       
           if (recherche_flip7==1){        //recherche si il y a un flip7
             tab_j[i].score=15;
-            printf (" %s a sept carte la manche est terminée !! \n",tab_j[i].pseudo);
+            printf (" %s a sept carte la manche est terminée !! \n\n",tab_j[i].pseudo);
             break;
           }   // fin recherche_flip7
           if ((*nbc)==0){
-            printf ("la pioche est vide la manche est terminée !! \n");
+            printf ("la pioche est vide la manche est terminée !! \n\n");
             break;
           }
 
@@ -125,7 +125,7 @@ printf("\n\n");
     tab_j[i].score=calcul_score(tab_j[i].main,nb_cartem);
     }
     tab_j[i].score_total+=tab_j[i].score;
-    printf (" le score de %s est de %d sur cette manche \n score total de ce joueur : %d\n",tab_j[i].pseudo,tab_j[i].score,tab_j[i].score_total);
+    printf (" le score de %s est de %d sur cette manche \n score total de ce joueur : %d\n\n",tab_j[i].pseudo,tab_j[i].score,tab_j[i].score_total);
 
   }
   if ((*nbc)==0){
