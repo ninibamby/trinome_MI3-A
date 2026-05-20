@@ -160,9 +160,4 @@ if ( n == 1 ){    //victoire par 200 points
 }
 }
 
-void viderBuffer() {         // supprime la saisie de l'utilisateur si celle-ci est mauvaise
-  char c;
-  do {
-    c = getchar();
-  } while (c != '\n');
-}
+
