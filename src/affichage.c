@@ -155,7 +155,7 @@ int count0=0;
 int count1=0;
 int comp0;
 int comp1;
-char nom_c[3];
+
 
 
 
