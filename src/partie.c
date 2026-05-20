@@ -38,6 +38,7 @@ printf("\n\n");
         compte_carte(tab_p,(*nbc));
         affiche_main( tab_j[i] );
         printf ("voulez vous piocher une carte ? \n");
+        printf(" Tapez 1 pour oui et 2 pour non \n");
         printf("\n");
 
       
