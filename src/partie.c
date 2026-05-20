@@ -35,8 +35,8 @@ printf("\n\n");
         printf (JAUNE_CLAIR"\033[1m-------tour du joueur : %d-------\033[0m\n\n"RESET,tab_j[i].numj);
         compte_carte(tab_p,(*nbc));
         affiche_main( tab_j[i] );
-        printf ("voulez vous piocher une carte ? \n");
-        printf(" Tapez 1 pour oui et 2 pour non \n");
+        printf("voulez vous piocher une carte ? \n");
+        printf("Tapez 1 pour oui et 2 pour non \n");
         printf("\n");
 
       
