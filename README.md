@@ -36,7 +36,7 @@ git clone https://github.com/ninibamby/trinome_MI3-A
 ### Entrer dans le dossier du projet
 
 ```bash
-cd FlipTech
+cd trinome_MI3-A
 ```
 
 ### Compiler le projet
