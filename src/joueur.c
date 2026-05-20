@@ -125,7 +125,7 @@ if ( n == 1 ){    //victoire par 200 points
       printf("|----------------------------------------------|\n");
       printf("| 🥇 |");
     printf(JAUNE_CLAIR"%15s    "RESET, tab[i].pseudo);
-    printf("| %8d|\n", tab[i].score_total);
+    printf("| %-8d|\n", tab[i].score_total);
       i--;
       printf("| 🥈 |%15s    |            %9d|\n", tab[i].pseudo, tab[i].score_total);
       printf("----------------------------------------------\n");
@@ -140,13 +140,13 @@ if ( n == 1 ){    //victoire par 200 points
       printf("|----------------------------------------------|\n");
       printf("| 🥇 |");
       printf(JAUNE_CLAIR"%15s    "RESET, tab[i].pseudo);
-      printf("| %8d|\n", tab[i].score_total);
+      printf("| %-8d|\n", tab[i].score_total);
       i--;
       printf("| 🥈 |%15s    |            %9d|\n", tab[i].pseudo, tab[i].score_total);
     i--;
       printf("| 🥉 |%15s    |            %9d|\n", tab[i].pseudo, tab[i].score_total);  
     for ( i = taille-4; i >= 0; i--){
-      printf("| %d |%15s    |            %9d|\n", j, tab[i].pseudo, tab[i].score_total);
+      printf("| %d  |%15s    |            %9d|\n", j, tab[i].pseudo, tab[i].score_total);
     j++;
     }
       printf("----------------------------------------------\n");
@@ -165,7 +165,7 @@ if ( n == 1 ){    //victoire par 200 points
       printf("|----------------------------------------------|\n");
       printf("| 🥇 |");
     printf(JAUNE_CLAIR"%15s    "RESET, tab[i].pseudo);
-    printf("| %8d|\n", tab[i].score_total);
+    printf("| %-8d|\n", tab[i].score_total);
       i--;
       printf("| 🥈 |%15s    |            %9d|\n", tab[i].pseudo, tab[i].score_total);
       printf("----------------------------------------------\n");
@@ -180,13 +180,13 @@ if ( n == 1 ){    //victoire par 200 points
       printf("|----------------------------------------------|\n");
       printf("| 🥇 |");
       printf(JAUNE_CLAIR"%15s    "RESET, tab[i].pseudo);
-      printf("| %8d|\n", tab[i].score_total);
+      printf("| %-8d|\n", tab[i].score_total);
       i--;
       printf("| 🥈 |%15s    |            %9d|\n", tab[i].pseudo, tab[i].score_total);
     i--;
       printf("| 🥉 |%15s    |            %9d|\n", tab[i].pseudo, tab[i].score_total);  
     for ( i = taille-4; i >= 0; i--){
-      printf("| %d |%15s    |            %9d|\n", j, tab[i].pseudo, tab[i].score_total);
+      printf("| %d  |%15s    |            %9d|\n", j, tab[i].pseudo, tab[i].score_total);
     j++;
     }
       printf("----------------------------------------------\n");
