@@ -77,7 +77,7 @@ void affiche_resultat( joueur* tab, int taille, int n){
     return;
   }
 
-int j = 1;
+int j = 4;
 int k = 1;
  
     
@@ -116,7 +116,7 @@ if ( n == 1 ){    //victoire par 200 points
       printf("| 🥈 |%15s    |            %9d|\n", tab[i].pseudo, tab[i].score_total);
     i--;
       printf("| 🥉 |%15s    |            %9d|\n", tab[i].pseudo, tab[i].score_total);  
-    for ( i = taille-4; i > 0; i--){
+    for ( i = taille-4; i >= 0; i--){
       printf("| %d |%15s    |            %9d|\n", j, tab[i].pseudo, tab[i].score_total);
     j++;
     }
@@ -156,7 +156,7 @@ if ( n == 1 ){    //victoire par 200 points
       printf("| 🥈 |%15s    |            %9d|\n", tab[i].pseudo, tab[i].score_total);
     i--;
       printf("| 🥉 |%15s    |            %9d|\n", tab[i].pseudo, tab[i].score_total);  
-    for ( i = taille-4; i > 0; i--){
+    for ( i = taille-4; i >= 0; i--){
       printf("| %d |%15s    |            %9d|\n", j, tab[i].pseudo, tab[i].score_total);
     j++;
     }
