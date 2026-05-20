@@ -12,16 +12,26 @@ if ( tab == NULL || taille <= 0){
 }
     int desordre;
 int etape = taille-1;
-carte temp;
+int temp_val;
+char temp_nom[10];
+int temp_type;
 do{
 
     desordre = 0;
     for( int i = 0; i < etape; i++){
         if ( tab[i].val > tab[i+1].val ){
             desordre = 1;
-            temp = tab[i];
-            tab[i] = tab[i+1];
-            tab[i+1] = temp;
+            temp_val = tab[i].val;
+            tab[i].val = tab[i+1].val;
+            tab[i+1].val = temp_val;
+
+            temp_type = tab[i].type;
+            tab[i].type = tab[i+1].type;
+            tab[i+1].type = temp_type;
+
+            strcpy(temp_nom , tab[i].nom);
+            strcpy(tab[i].nom , tab[i+1].nom);
+            strcpy(tab[i+1].nom , temp_nom);
         }
     } etape--;
 }while( etape > 0 && desordre != 0);
