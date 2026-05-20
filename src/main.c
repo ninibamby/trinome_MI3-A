@@ -20,7 +20,9 @@ do{
 printf("Combien y a t'il de joueur ? \n"); // demande le nb de joueurs
 verif = scanf ("%d", &nbj);
     int c;
-while ((c = getchar()) != '\n' && c != EOF);
+while ((c = getchar()) != '\n' && c != EOF){
+    ;
+}
     
     if ( verif != 1){ // si scanf n'arrive pas à lire un entier alors il ne renvoie pas 1
         viderBuffer();
