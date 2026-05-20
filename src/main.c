@@ -30,7 +30,7 @@ verif = scanf ("%d", &nbj);
 while ((c = getchar()) != '\n' && c != EOF);
 }while(nbj<2);//demande du nombre de joueur
 
-joueur tab_joueur[nbj];
+joueur* tab_joueur = malloc(nbj * sizeof(joueur));
 
 
 
@@ -49,7 +49,7 @@ creation_pioche(pioche,&taille_pioche);
 partie(tab_joueur,nbj,pioche,&taille_pioche);
 
 
-    
+    free(tab_joueur);
 return 0;
 }
 
