@@ -14,14 +14,18 @@
 joueur CreationJoueur(int x){ //creer le profil de chaque joueur de la partie
   joueur a;
   a.numj=x;
-  a.pseudo[20]={0};
+  for(int i = 0; i < 20; i++) {
+    a.pseudo[i] = '\0';
+}
 
   printf (" Joueur %d, veuillez entrer votre pseudo (max 15 caractères ): \n ", x);
   do {
       scanf ( "%s", a.pseudo);
     if(a.pseudo[15]!="\0"){
         printf (" ⛔️ pseudo trop long ⛔️ \n");
-         a.pseudo[20]={0};
+         for(int i = 0; i < 20; i++) {
+            a.pseudo[i] = '\0';
+            }
     }
     }while(a.pseudo[15]!="\0");
   a.nb_carte=0;
