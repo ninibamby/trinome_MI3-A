@@ -79,41 +79,43 @@ int k = 1;
 printf("\n");
 printf("\n");
 
-    
-  if ( n == 1 ){    //victoire par 200 points
+
+if ( n == 1 ){    //victoire par 200 points
     class_joueurs( tab, taille );
     if(taille=2){     //pour 2 joueurs
       int i = taille-1;
       printf(" On a un grand gagnant ! c'est %s🏆 avec %d points \n ", tab[taille-1].pseudo, tab[taille-1].score_total );
-      printf(" 🏆CLASSEMENT DES JOUEURS🏆 \n");
-      printf(" _____________________________\n");
-      printf("| #  |  JOUEUR    | SCORE     |\n");
-      printf("|-----------------------------|\n");
-      printf("| 🥇 | %-10s        | %8d        |\n", tab[i].pseudo, tab[i].score_total);
+      printf(JAUNE_CLAIR" 🏆 CLASSEMENT DES JOUEURS 🏆 \n"RESET);
+      printf(" ______________________________________________\n");
+      printf("| #  |      JOUEUR       |         SCORE       |\n");
+      printf("|----------------------------------------------|\n");
+      printf("| 🥇 |");
+    printf(JAUNE_CLAIR"%15s    "RESET, tab[i].pseudo);
+    printf("| %8d|\n", tab[i].score_total);
       i--;
-      printf("| 🥈 | %-10s         | %8d        |\n", tab[i].pseudo, tab[i].score_total);
-      printf("---------------------------------\n");
+      printf("| 🥈 |%15s    |            %9d|\n", tab[i].pseudo, tab[i].score_total);
+      printf("----------------------------------------------\n");
     }
     else{       //pour plus de 2 joueurs
     
     int i = taille-1;
     printf(" On a un grand gagnant ! c'est %s🏆 avec %d points \n ", tab[taille-1].pseudo, tab[taille-1].score_total );
-    printf(" 🏆CLASSEMENT DES JOUEURS🏆 \n");
-    printf(" _____________________________\n");
-    printf("| #  |  JOUEUR    | SCORE     |\n");
-    printf("|-----------------------------|\n");
-    printf("| 🥇 |");
-    printf(JAUNE_CLAIR" %-10s"RESET, tab[i].pseudo);
-    printf("| %8d        |\n", tab[i].score_total);
+    printf(JAUNE_CLAIR" 🏆 CLASSEMENT DES JOUEURS 🏆 \n"RESET);
+      printf(" ______________________________________________\n");
+      printf("| #  |      JOUEUR       |         SCORE       |\n");
+      printf("|----------------------------------------------|\n");
+      printf("| 🥇 |");
+      printf(JAUNE_CLAIR"%15s    "RESET, tab[i].pseudo);
+      printf("| %8d|\n", tab[i].score_total);
+      i--;
+      printf("| 🥈 |%15s    |            %9d|\n", tab[i].pseudo, tab[i].score_total);
     i--;
-    printf("| 🥈 | %-10s         | %8d        |\n", tab[i].pseudo, tab[i].score_total);
-    i--;
-    printf("| 🥉 | %-10s         | %8d        |\n", tab[i].pseudo, tab[i].score_total);  
+      printf("| 🥉 |%15s    |            %9d|\n", tab[i].pseudo, tab[i].score_total);  
     for ( i = taille-4; i > 0; i--){
-    printf("| %d  | %-10s        | %8d        | \n", j, tab[i].pseudo, tab[i].score_total);
+      printf("| %d |%15s    |            %9d|\n", j, tab[i].pseudo, tab[i].score_total);
     j++;
     }
-    printf("---------------------------------\n");
+      printf("----------------------------------------------\n");
     }
   }
   
@@ -123,37 +125,38 @@ printf("\n");
       int y=taille-1;
       
     printf(" Personne n'a réussit à obtenir 200 points durant cette partie mais nous avons quand même un gagnant ! \n" );
-    printf(" 🏆CLASSEMENT DES JOUEURS🏆 \n");
-    printf(" _____________________________\n");
-    printf("| #  |  JOUEUR    | SCORE     |\n");
-    printf("|-----------------------------|\n");
-    printf("| 🥇 | %-10s        | %8d        |\n", tab[y].pseudo, tab[y].score_total);
-    y--;
-    printf("| 🥈 | %-10s         | %8d        |\n", tab[y].pseudo, tab[y].score_total);
-    
-
-    printf("---------------------------------\n");
+    printf(JAUNE_CLAIR" 🏆 CLASSEMENT DES JOUEURS 🏆 \n"RESET);
+      printf(" ______________________________________________\n");
+      printf("| #  |      JOUEUR       |         SCORE       |\n");
+      printf("|----------------------------------------------|\n");
+      printf("| 🥇 |");
+    printf(JAUNE_CLAIR"%15s    "RESET, tab[i].pseudo);
+    printf("| %8d|\n", tab[i].score_total);
+      i--;
+      printf("| 🥈 |%15s    |            %9d|\n", tab[i].pseudo, tab[i].score_total);
+      printf("----------------------------------------------\n");
     }
   else{       //pour plus de 2 joueurs
   int y=taille-1;
   class_joueurs( tab, taille );
   printf(" Personne n'a réussit à obtenir 200 points durant cette partie mais nous avons quand même un gagnant ! \n" );
-  printf(" 🏆CLASSEMENT DES JOUEURS🏆 \n");
-  printf(" _____________________________\n");
-  printf("| #  |  JOUEUR    | SCORE     |\n");
-  printf("|-----------------------------|\n");
-  printf("| 🥇 | %-10s        | %8d        |\n", tab[y].pseudo, tab[y].score_total);
-  y--;
-  printf("| 🥈 | %-10s         | %8d        |\n", tab[y].pseudo, tab[y].score_total);
-  y--;
-  printf("| 🥉 | %-10s         | %8d        |\n", tab[y].pseudo, tab[y].score_total);
-  
-    for ( y = taille-4; y > 0; y--){
-  printf("| %d  | %-10s        | %8d        | \n", k, tab[y].pseudo, tab[y].score_total);
-    k++;
+ printf(JAUNE_CLAIR" 🏆 CLASSEMENT DES JOUEURS 🏆 \n"RESET);
+      printf(" ______________________________________________\n");
+      printf("| #  |      JOUEUR       |         SCORE       |\n");
+      printf("|----------------------------------------------|\n");
+      printf("| 🥇 |");
+      printf(JAUNE_CLAIR"%15s    "RESET, tab[i].pseudo);
+      printf("| %8d|\n", tab[i].score_total);
+      i--;
+      printf("| 🥈 |%15s    |            %9d|\n", tab[i].pseudo, tab[i].score_total);
+    i--;
+      printf("| 🥉 |%15s    |            %9d|\n", tab[i].pseudo, tab[i].score_total);  
+    for ( i = taille-4; i > 0; i--){
+      printf("| %d |%15s    |            %9d|\n", j, tab[i].pseudo, tab[i].score_total);
+    j++;
     }
- printf("---------------------------------\n");
-  }
+      printf("----------------------------------------------\n");
+    }
 }
 }
 
