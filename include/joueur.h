@@ -9,4 +9,6 @@ void class_joueurs( joueur* tab, int taille );
 
 void affiche_resulat( joueur* tab, int taille, int n);
 
+void viderBuffer();
+
 #endif
