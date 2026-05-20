@@ -27,8 +27,6 @@ int  manche(joueur* tab_j, int nbj, carte* tab_p, int* nbc){     //return 0 = pa
     }
 
 printf("\n\n");
-printf(ROUGE_CLAIR_GRAS"---------- debut de la manche -------------"RESET);
-printf("\n\n");
 
   do{        //debut de la boucle de la manche 
 
@@ -156,16 +154,22 @@ void partie (joueur* tab_j,int nbj, carte* tab_p , int* nbc){   //debut fct part
     printf("💥Aïe... impossible de lire les données \n");
     return;
   }
-  int nb_tour;
+  int nb_tour=0;
 
   melange_pioche(tab_p,(*nbc));   //appel la fct melange_pioche
   int res_manche=0;
   do{
     res_manche=0;
+nb_tour++;
+    printf(ROUGE_CLAIR"----------- DEBUT DU TOUR : %d ------------\n"RESET,nb_tour);
+    printf("\n\n");
     res_manche=manche(tab_j,nbj,tab_p,&NBC);
 
+
+    
     affiche_resultat(tab_j,nbj,res_manche);
 
+    
 
 
   }while(res_manche!=1 && res_manche!=2);
